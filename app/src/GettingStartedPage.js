@@ -5,9 +5,9 @@ import NavMain from './NavMain';
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
 import Anchor from './Anchor';
-import Row from '../../src/Row';
-import Col from '../../src/Col';
-import Panel from '../../src/Panel';
+import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Panel } from 'react-bootstrap';
 
 export default class Page extends React.Component {
   render() {
@@ -109,7 +109,7 @@ var Alert = require('react-bootstrap').Alert;`
                 codeText={
 `import Button from 'react-bootstrap/lib/Button';
 // or
-import { Button } from 'react-bootstrap';`
+import { { Button } } from 'react-bootstrap';`
                 }
               />
 

@@ -10,7 +10,7 @@
   "scripts": {
     "build": "babel-node tools/build-cli.js --docs-only",
     "start": "babel-node app/dev-run",
-    "docs-prod": "npm run docs-build && NODE_ENV=production babel-node docs/server.js",
+    "docs-prod": "npm run docs-build && NODE_ENV=production babel-node app/server.js",
     "docs-prod-unoptimized": "npm run docs-build -- --dev && NODE_ENV=production babel-node docs/server.js"
   },
   "author": "Craig M. Wellington <cmwellington@gmail.com>",
@@ -80,5 +80,8 @@
     "warning": "^2.1.0"
   },
   "dependencies": {
+    "less": "^2.6.1",
+    "react-bootstrap": "^0.29.3",
+    "react-dom": "^15.0.2"
   }
 }

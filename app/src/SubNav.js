@@ -1,9 +1,9 @@
 import React, { cloneElement } from 'react';
 import classNames from 'classnames';
 
-import ValidComponentChildren from '../../src/utils/ValidComponentChildren';
-import createChainedFunction from '../../src/utils/createChainedFunction';
-import SafeAnchor from '../../src/SafeAnchor';
+import { ValidComponentChildren } from 'react-bootstrap';
+import { createChainedFunction } from 'react-bootstrap';
+import { SafeAnchor } from 'react-bootstrap';
 
 const SubNav = React.createClass({
   propTypes: {

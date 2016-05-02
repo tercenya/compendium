@@ -2,10 +2,11 @@ import React from 'react';
 
 import NavMain from './NavMain';
 import PageFooter from './PageFooter';
-import Grid from '../../src/Grid';
-import Alert from '../../src/Alert';
-import Glyphicon from '../../src/Glyphicon';
-import Label from '../../src/Label';
+import { Grid } from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
+import { Glyphicon } from 'react-bootstrap';
+import { Label } from 'react-bootstrap';
+
 
 export default class HomePage extends React.Component {
   render() {

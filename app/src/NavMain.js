@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Navbar from '../../src/Navbar';
-import Nav from '../../src/Nav';
+import { Navbar } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 const NAV_LINKS = {
   'introduction': {

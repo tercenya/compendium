@@ -1,8 +1,8 @@
 import _ from 'lodash-compat';
 import React from 'react';
-import Glyphicon from '../../src/Glyphicon';
-import Label from '../../src/Label';
-import Table from '../../src/Table';
+import { Glyphicon } from 'react-bootstrap';
+import { Label } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 
 let cleanDocletValue = str => str.trim().replace(/^\{/, '').replace(/\}$/, '');

@@ -2,8 +2,8 @@ import React from 'react';
 import AutoAffix from 'react-overlays/lib/AutoAffix';
 import Waypoint from 'react-waypoint';
 
-import Nav from '../../src/Nav';
-import NavItem from '../../src/NavItem';
+import { Nav } from 'react-bootstrap';
+import { NavItem } from 'react-bootstrap';
 
 import Anchor from './Anchor';
 import NavMain from './NavMain';
