@@ -1,0 +1,6 @@
+{
+  "stage": 1,
+  "optional": ["runtime"],
+  "loose": ["all"],
+  "plugins": ["dev-expression"]
+}
