@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function ImageSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="images">Images</Anchor> <small>Image</small>
       </h2>

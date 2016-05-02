@@ -1,59 +1,29 @@
 import React from 'react';
 import packageJSON from '../../package.json';
 
-let version = packageJSON.version;
+const version = packageJSON.version;
 
-if (/docs/.test(version)) {
-  version = version.split('-')[0];
-}
-
-const PageFooter = React.createClass({
-  render() {
-    return (
-        <footer className="bs-docs-footer" role="contentinfo">
-          <div className="container">
-            <div className="bs-docs-social">
-              <ul className="bs-docs-social-buttons">
-                <li>
-                  <iframe className="github-btn"
-                    src="https://ghbtns.com/github-btn.html?user=react-bootstrap&repo=react-bootstrap&type=watch&count=true"
-                    width={95}
-                    height={20}
-                    title="Star on GitHub" />
-                </li>
-                <li>
-                  <iframe className="github-btn"
-                    src="https://ghbtns.com/github-btn.html?user=react-bootstrap&repo=react-bootstrap&type=fork&count=true"
-                    width={92}
-                    height={20}
-                    title="Fork on GitHub" />
-                </li>
-                <li>
-                  <iframe
-                    src="https://platform.twitter.com/widgets/follow_button.html?screen_name=react_bootstrap&show_screen_name=true"
-                    width={230}
-                    height={20}
-                    allowTransparency="true"
-                    frameBorder="0"
-                    scrolling="no">
-                  </iframe>
-                </li>
-              </ul>
-            </div>
-            <p>Code licensed under <a href="https://github.com/react-bootstrap/react-bootstrap/blob/master/LICENSE" target="_blank">MIT</a>.</p>
-            <ul className="bs-docs-footer-links muted">
-              <li>Currently v{version}</li>
-              <li>·</li>
-              <li><a href="https://github.com/react-bootstrap/react-bootstrap/">GitHub</a></li>
-              <li>·</li>
-              <li><a href="https://github.com/react-bootstrap/react-bootstrap/issues?state=open">Issues</a></li>
-              <li>·</li>
-              <li><a href="https://github.com/react-bootstrap/react-bootstrap/releases">Releases</a></li>
-            </ul>
-          </div>
-        </footer>
-      );
-  }
-});
+const PageFooter = (props) => {
+  return (
+    <footer className="compendium-footer" role="contentinfo">
+      <div className="container">
+        <ul className="compendium-footer-links">
+          <li>&copy; 2016 Craig M. Wellington</li>
+          <li>·</li>
+          <li><a href="https://github.com/tercenya/compendium/blob/master/LICENSE" target="_blank">MIT</a> license</li>
+          <li>·</li>
+          <li>v{version}</li>
+          <li>·</li>
+          <li><a href="https://github.com/tercenya/compendium/">GitHub</a></li>
+        </ul>
+        <ul className="compendium-disclaimer muted">
+          <li>Compendium isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends.</li>
+          <li>League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.</li>
+          <li>League of Legends © Riot Games, Inc.</li>
+        </ul>
+      </div>
+    </footer>
+  )
+};
 
 export default PageFooter;

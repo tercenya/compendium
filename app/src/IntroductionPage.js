@@ -15,10 +15,10 @@ const IntroductionPage = React.createClass({
           title="Introduction"
           subTitle="The most popular front-end framework, rebuilt for React."/>
 
-        <div className="container bs-docs-container">
+        <div className="container compendium-container">
           <div className="row">
             <div className="col-md-9" role="main">
-              <div className="bs-docs-section">
+              <div className="compendium-section">
                 <p className="lead">
                   React-Bootstrap is a library of reusable front-end components.
                   You'll get the look-and-feel of Twitter Bootstrap,
@@ -32,7 +32,7 @@ const IntroductionPage = React.createClass({
                   you might write something like:
                 </p>
 
-                <div className="highlight">
+                <div>
                   <CodeExample
                     mode="javascript"
                     codeText={

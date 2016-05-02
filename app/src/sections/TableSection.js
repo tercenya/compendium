@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function TableSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="tables">Tables</Anchor> <small>Table</small>
       </h2>

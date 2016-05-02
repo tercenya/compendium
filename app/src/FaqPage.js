@@ -14,10 +14,10 @@ export default class Page extends React.Component {
             title="Need help?"
             subTitle="Community resources for answering your React-Bootstrap questions." />
 
-          <div className="container bs-docs-container">
+          <div className="container compendium-container">
             <div className="row">
               <div className="col-md-9" role="main">
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <p className="lead">Stay up to date on the development of React-Bootstrap and reach out to the community with these helpful resources.</p>
 
                   <h3>Stack Overflow</h3>

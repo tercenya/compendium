@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function ResponsiveEmbedSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="responsive-embed">Responsive embed</Anchor> <small>ResponsiveEmbed</small>
       </h2>

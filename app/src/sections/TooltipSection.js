@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function TooltipSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="tooltips">Tooltips</Anchor> <small>Tooltip</small>
       </h2>

@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function BreadcrumbSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="breadcrumbs">Breadcrumbs</Anchor> <small>Breadcrumb, Breadcrumb.Item</small>
       </h2>

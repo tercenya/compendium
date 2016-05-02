@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function WellSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="wells">Wells</Anchor> <small>Well</small>
       </h2>

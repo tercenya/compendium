@@ -19,19 +19,19 @@ export default class Page extends React.Component {
             title="Getting started"
             subTitle="An overview of React-Bootstrap and how to install and use." />
 
-          <div className="container bs-docs-container bs-docs-single-col-container">
-            <div className="bs-docs-section">
+          <div className="container compendium-container compendium-single-col-container">
+            <div className="compendium-section">
               <h2 className="page-header"><Anchor id="install">Install</Anchor></h2>
               <Row>
                 <Col sm={6}>
-                  <Panel header="npm (recommended)" className="bs-docs-code-panel">
+                  <Panel header="npm (recommended)" className="compendium-code-panel">
                     <CodeExample
                       codeText={`$ npm install react-bootstrap --save`}
                     />
                   </Panel>
                 </Col>
                 <Col sm={6}>
-                  <Panel header="bower" className="bs-docs-code-panel">
+                  <Panel header="bower" className="compendium-code-panel">
                     <CodeExample
                       codeText={`$ bower install react react-bootstrap`}
                     />
@@ -150,7 +150,7 @@ var Alert = ReactBootstrap.Alert;
               />
 
             </div>
-            <div className="bs-docs-section">
+            <div className="compendium-section">
               <h2 className="page-header"><Anchor id="browser-support">Browser support</Anchor></h2>
               <p>We aim to support all browsers supported by both <a href="http://facebook.github.io/react/docs/working-with-the-browser.html#browser-support-and-polyfills">React</a> and <a href="http://getbootstrap.com/getting-started/#support">Bootstrap</a>.</p>
               <p>Unfortunately, due to the lack of resources and the will of dedicating the efforts to modern browsers and getting closer to Bootstrap's features, we will not be testing <code>react-bootstrap</code> against IE8 anymore.

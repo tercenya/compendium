@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function OverlaySection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="custom-overlays">Custom overlays</Anchor> <small>Overlay</small>
       </h2>

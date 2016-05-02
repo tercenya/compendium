@@ -39,10 +39,9 @@ export default _.extend({}, baseConfig, {
     loaders: [
       { test: /\.js/, loader: `${reactHot}${jsLoader}`, exclude: /node_modules|Samples\.js/ },
       { test: /Samples.js/, loader: `${reactHot}transform?brfs!${jsLoader}` },
-      { test: /\.css/,
-        loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}`) },
-      { test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}!less${cssSourceMap}`) },
+      { test: /\.css/, loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}`) },
+      { test: /\.scss/, loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}!sass${cssSourceMap}`) },
+      { test: /\.less$/, loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}!less${cssSourceMap}`) },
       { test: /\.json$/, loader: 'json' },
       { test: /\.jpe?g$|\.gif$|\.png|\.ico$/, loader: 'file?name=[name].[ext]' },
       { test: /\.eot$|\.ttf$|\.svg$|\.woff2?$/, loader: 'file?name=[name].[ext]' }

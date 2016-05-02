@@ -197,7 +197,7 @@ const ComponentsPage = React.createClass({
           <PageHeader
             title="Components"
             subTitle="" />
-          <div ref="main" className="container bs-docs-container">
+          <div ref="main" className="container compendium-container">
             <div className="row">
               <div className="col-md-9" role="main">
                 {this.renderScrollSpy(sections.buttons)}
@@ -210,7 +210,7 @@ const ComponentsPage = React.createClass({
                 <MenuItemSection />
 
                 {this.renderScrollSpy(sections.overlays)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h1 className="page-header">
                     <Anchor id="overlays">Overlays</Anchor>
                   </h1>
@@ -228,7 +228,7 @@ const ComponentsPage = React.createClass({
                 <OverlaySection />
 
                 {this.renderScrollSpy(sections.navigation)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h1 className="page-header">
                     <Anchor id="navigation">Navigation</Anchor>
                   </h1>
@@ -250,7 +250,7 @@ const ComponentsPage = React.createClass({
                 <PagerSection />
 
                 {this.renderScrollSpy(sections.layout)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h1 className="page-header">
                     <Anchor id="page-layout">Page layout</Anchor>
                   </h1>
@@ -285,7 +285,7 @@ const ComponentsPage = React.createClass({
                 <FormValidationSection />
 
                 {this.renderScrollSpy(sections.media)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h1 className="page-header">
                     <Anchor id="media-content">Media content</Anchor>
                   </h1>
@@ -305,7 +305,7 @@ const ComponentsPage = React.createClass({
                 <MediaSection />
 
                 {this.renderScrollSpy(sections.misc)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h1 className="page-header">
                     <Anchor id="misc">Miscellaneous components</Anchor>
                   </h1>
@@ -326,7 +326,7 @@ const ComponentsPage = React.createClass({
 
 
                 {this.renderScrollSpy(sections.utilities)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h1 className="page-header">
                     <Anchor id="utilities">Utilities</Anchor>
                   </h1>
@@ -341,7 +341,7 @@ const ComponentsPage = React.createClass({
                 <CustomStylesSection />
 
                 {this.renderScrollSpy(sections.missing)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h1 className="page-header">
                     <Anchor id="missing">Missing components</Anchor>
                   </h1>
@@ -350,7 +350,7 @@ const ComponentsPage = React.createClass({
                 </div>
 
                 {this.renderScrollSpy(sections.affix)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h2 className="page-header">
                     <Anchor id="affix">Affix</Anchor>
                   </h2>
@@ -360,7 +360,7 @@ const ComponentsPage = React.createClass({
                 </div>
 
                 {this.renderScrollSpy(sections.scrollspy)}
-                <div className="bs-docs-section">
+                <div className="compendium-section">
                   <h2 className="page-header">
                     <Anchor id="scrollspy">Scrollspy</Anchor>
                   </h2>
@@ -375,17 +375,17 @@ const ComponentsPage = React.createClass({
               </div>
 
 
-              <div className="col-md-3 bs-docs-sidebar-holder">
+              <div className="col-md-3 compendium-sidebar-holder">
                 <AutoAffix
                   viewportOffsetTop={20}
                   container={this.getMain}
                 >
                   <div
-                    className="bs-docs-sidebar hidden-print"
+                    className="compendium-sidebar hidden-print"
                     role="complementary"
                   >
                     <Nav
-                      className="bs-docs-sidenav"
+                      className="compendium-sidenav"
                       activeHref={this.state.activeNavItemHref}
                       onSelect={this.handleNavItemSelect}
                     >

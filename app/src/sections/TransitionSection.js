@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function TransitionSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="transitions">Transitions</Anchor> <small>Collapse, Fade</small>
       </h2>

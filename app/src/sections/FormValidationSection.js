@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function FormValidationSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="forms-validation">Validation states</Anchor> <small>FormControl.Feedback</small>
       </h2>

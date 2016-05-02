@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function GlyphiconSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="glyphicons">Glyphicons</Anchor> <small>Glyphicon</small>
       </h2>

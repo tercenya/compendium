@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function PopoverSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="popovers">Popovers</Anchor> <small>Popover</small>
       </h2>

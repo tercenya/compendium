@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function JumbotronSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="jumbotron">Jumbotron</Anchor> <small>Jumbotron</small>
       </h2>

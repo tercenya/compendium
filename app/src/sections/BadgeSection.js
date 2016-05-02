@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function BadgeSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="badges">Badges</Anchor> <small>Badge</small>
       </h2>

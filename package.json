@@ -9,7 +9,7 @@
   "homepage": "http://tercenya.github.io/compendium",
   "scripts": {
     "build": "babel-node tools/build-cli.js --docs-only",
-    "start": "babel-node app/dev-run",
+    "start": "nodemon --exec babel-node app/dev-run",
     "docs-prod": "npm run docs-build && NODE_ENV=production babel-node app/server.js",
     "docs-prod-unoptimized": "npm run docs-build -- --dev && NODE_ENV=production babel-node docs/server.js"
   },
@@ -81,7 +81,9 @@
   },
   "dependencies": {
     "less": "^2.6.1",
+    "node-sass": "^3.6.0",
     "react-bootstrap": "^0.29.3",
-    "react-dom": "^15.0.2"
+    "react-dom": "^15.0.2",
+    "sass-loader": "^3.2.0"
   }
 }

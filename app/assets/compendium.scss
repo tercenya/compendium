@@ -1,0 +1,43 @@
+.compendium-logo {
+  background: url('./morellonomicon-shift92.png') 0 0 no-repeat;
+  background-size: contain;
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+.compendium-masthead .compendium-logo {
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  border-radius: 5%;
+}
+
+.compendium-footer-links {
+  padding-left: 0;
+  margin-top: 20px;
+  color: #999;
+  
+  li {
+    display: inline;
+    padding: 0 2px;
+    
+    &:first-child { padding-left: 0; }    
+  }
+}
+
+.compendium-disclaimer {
+  @extend .compendium-footer-links;
+  
+  li {  display: block; }
+}
+
+
+// @TODO: remove the highlights
+.highlight, .code-toggle.open {
+  background-color: #263238 !important;
+}
+
+.highlight pre code {
+  color: #ddd;
+}

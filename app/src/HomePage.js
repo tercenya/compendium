@@ -2,10 +2,7 @@ import React from 'react';
 
 import NavMain from './NavMain';
 import PageFooter from './PageFooter';
-import { Grid } from 'react-bootstrap';
-import { Alert } from 'react-bootstrap';
-import { Glyphicon } from 'react-bootstrap';
-import { Label } from 'react-bootstrap';
+import { Grid, Glyphicon, Label, Alert } from 'react-bootstrap';
 
 
 export default class HomePage extends React.Component {
@@ -14,10 +11,15 @@ export default class HomePage extends React.Component {
       <div>
         <NavMain activePage="home" />
 
-        <main className="bs-docs-masthead" id="content" role="main">
+        <main className="compendium-masthead" id="content" role="main">
           <div className="container">
-            <span className="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline"></span>
-            <p className="lead">The most popular front-end framework, rebuilt for React.</p>
+            <h1 className="title">
+              <span className="compendium-logo compendium-logo-outline" />
+              Compendium
+            </h1>
+            <p className="lead">
+              <span>Arinya's Guide to the Riot Games API</span>
+            </p>
           </div>
         </main>
 

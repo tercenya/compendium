@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function FormLayoutSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="forms-layout">Form layout</Anchor> <small>Form</small>
       </h2>

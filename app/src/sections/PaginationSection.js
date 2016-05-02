@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function PaginationSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="pagination">Pagination</Anchor> <small>Pagination</small>
       </h2>

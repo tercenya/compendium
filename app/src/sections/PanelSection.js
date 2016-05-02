@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function PanelSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="panels">Panels</Anchor> <small>Panel, PanelGroup, Accordion</small>
       </h2>

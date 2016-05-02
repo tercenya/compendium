@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function NavSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="navs">Navs</Anchor> <small>Nav, NavItem</small>
       </h2>

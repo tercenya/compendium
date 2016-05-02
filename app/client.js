@@ -15,16 +15,17 @@ import 'bootstrap/less/bootstrap.less';
 import './assets/docs.css';
 import './assets/style.css';
 
+
+import './assets/compendium.scss';
+
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/solarized.css';
+import 'codemirror/theme/material.css';
 import './assets/CodeMirror.css';
 
-import './assets/carousel.png';
-import './assets/logo.png';
+import './assets/morellonomicon.png';
+import './assets/morellonomicon-shift92.png';
 import './assets/favicon.ico';
-import './assets/thumbnail.png';
-import './assets/thumbnaildiv.png';
-import './assets/TheresaKnott_castle.svg';
 
 global.CodeMirror = CodeMirror;
 

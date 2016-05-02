@@ -107,7 +107,7 @@ class CodeMirrorEditor extends React.Component {
       lineWrapping: false,
       matchBrackets: true,
       tabSize: 2,
-      theme: 'solarized light',
+      theme: 'material',
       readOnly: this.props.readOnly
     });
     this.editor.on('change', this.handleChange);

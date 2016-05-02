@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function ButtonSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h1 className="page-header">
         <Anchor id="buttons">Buttons</Anchor> <small>Button</small>
       </h1>

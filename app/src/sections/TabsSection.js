@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function TabsSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="tabs">Togglable tabs</Anchor> <small>Tabs, Tab, TabContainer, TabContent, TabPane</small>
       </h2>

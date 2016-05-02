@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function MediaSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="media-objects">Media objects</Anchor> <small>Media, Media.Left, Media.Right, Media.Heading, Media.List, Media.ListItem</small>
       </h2>

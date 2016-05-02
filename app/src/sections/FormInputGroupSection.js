@@ -7,7 +7,7 @@ import Samples from '../Samples';
 
 export default function FormInputGroupSection() {
   return (
-    <div className="bs-docs-section">
+    <div className="compendium-section">
       <h2 className="page-header">
         <Anchor id="forms-input-groups">Input groups</Anchor> <small>InputGroup, InputGroup.Addon, InputGroup.Button</small>
       </h2>
