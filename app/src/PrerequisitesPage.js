@@ -13,7 +13,7 @@ export default class Page extends React.Component {
   render() {
     return (
         <div>
-          <NavMain activePage="getting-started" />
+          <NavMain activePage="prerequisites" />
 
           <PageHeader
             title="Getting started"

@@ -8,9 +8,9 @@ const NAV_LINKS = {
     link: '/introduction.html',
     title: 'introduction'
   },
-  'prerequites': {
-    link: '/prerequites.html',
-    title: 'prerequites'
+  'prerequisites': {
+    link: '/prerequisites.html',
+    title: 'prerequisites'
   },
   'guides': {
     link: '/guides.html',
@@ -50,7 +50,9 @@ const NavMain = (props) => {
     >
       <Navbar.Header>
         <Navbar.Brand>
-          <Link to="/">Compendium</Link>
+          <Link to="/">
+            <span className="compendium-logo" />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
