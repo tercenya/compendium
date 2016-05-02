@@ -1,3 +1,5 @@
+///// Logo
+
 .compendium-logo {
   background: url('./morellonomicon-shift92.png') 0 0 no-repeat;
   background-size: contain;
@@ -13,6 +15,28 @@
   border-radius: 5%;
 }
 
+///// Navbar 
+
+.compendium-nav .navbar-brand .compendium-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 5%;
+}
+
+
+.compendium-nav .navbar-brand {
+  font-size: 150%;
+}
+
+@media (min-width: 768px) {
+  .compendium-nav .navbar-nav>li>a:hover,.compendium-nav .navbar-nav>.active>a, .compendium-nav .navbar-nav>.active>a:hover {
+    border-bottom: 3px solid blue;
+  }
+}
+
+
+
+//// Footer
 .compendium-footer-links {
   padding-left: 0;
   margin-top: 20px;
@@ -32,6 +56,10 @@
   li {  display: block; }
 }
 
+
+
+
+///// Fixes
 
 // @TODO: remove the highlights
 .highlight, .code-toggle.open {

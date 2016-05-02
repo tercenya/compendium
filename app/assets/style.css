@@ -62,11 +62,6 @@ body {
   color: #666;
 }
 
-.compendium-sidebar .nav>li>a:hover, .compendium-sidebar .nav>li>a:focus {
-  color: #cc7a6f;
-  border-left: 1px solid #cc7a6f;
-}
-
 .back-to-top:hover {
   color: #cc7a6f;
 }
