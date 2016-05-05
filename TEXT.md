@@ -7,7 +7,7 @@ As [stated by Riot](http://engineering.riotgames.com/news/riot-games-api-goals-a
 
 Compendium is a step-by-step walkthrough to get you going.
 
-Riot has a Getting Started page.  But there's a lot you can do with the Riot API, and quite a bit more you need to know before hand... one page just can't quite cover everything. 
+Riot has a Getting Started page.  But there's a lot you can do with the Riot API, and quite a bit more you need to know before hand... one page just can't quite cover everything.
 
 ## Audience
 
@@ -24,30 +24,41 @@ This is the guide for you.
 That said, if you are completely new to programming, even this guide may pose a challenge.
 However I would encourage you to try, as every program every written was once just the desire of a would-be programmer, who they themselves set forth to learn just the same.
 
+## What we're not going to do
+
 ## Structure
 
 
 ## Languages
 
-- Why no javascript?
+This guide provides examples in ruby, java, nodejs, python, and php.  Calls against the Riot API also have command-line examples using cURL.
+
+### Why no javascript?
+Javascript is client-side only.  If you were to embed your secret API key and serve it in a web browser to the public, your key wouldn't be secret anymore!  If you need to use javascript for your front end, you can create a non-isomorphic javascript website that calls a nodejs webservice for all Riot API activities, thereby securing your key.  This guide will get you started on the latter.
 
 
 ## Using community libraries
 
 # Prerequisites
 
-## Development environment
+- A development environment
 
-Languages (link to resources)
-Command-line tools (curl)
+We're going to assume you have already picked your language of choice, and have it installed on your machine.  The [Resources](/resources#tools) page has links to other websites for installer on various languages and platforms.
 
+- A League of Legends account
+Yes, you'll need one of those too.  It's also free.
 
-## JSON
+- Working knowledge of JSON
 
 ## Getting a development key
-- https://developer.riotgames.com/docs/api-keys
+To acquire or look up your Developer API key, log into the Riot [developer website](https://developer.riotgames.com/sign-in) with your League of Legends credentials.  In the middle of your dashboard is your current Development key, along with a button to create a new one.
 
-- keeping your key secure (https://developer.riotgames.com/best-practices, https://developer.riotgames.com/discussion/announcements/show/oomYkEK4 )
+### Keeping your key secure
+- don't check your key into source control (e.g. put it on github)
+- don't post your key on the forums (e.g. when asking for help with your code)
+- don't put your key into javascript (and send it to your clients)
+
+This topic (and many more ways to fail) is discussed a some length in [the forums](https://developer.riotgames.com/discussion/announcements/show/oomYkEK4)
 
 # Guides
 
@@ -80,11 +91,11 @@ Command-line tools (curl)
 
 ## Rate Limiting
 
-Riot has a fairly comprehensive explanation of [Rate Limiting](https://developer.riotgames.com/docs/rate-limiting), although the actual rate limits are located on the [API Keys page](https://developer.riotgames.com/docs/api-keys).  Since their documentation is fairly through, and reasonably accessible, we're going to cover the common pitfalls and misunderstandings.
+Riot has a fairly comprehensive explanation of [Rate Limiting](https://developer.riotgames.com/docs/rate-limiting), although the actual rate limits are located on the [API Keys page](https://developer.riotgames.com/docs/api-keys).  Since their documentation is fairly through, and reasonably accessible, we're only going to cover the common pitfalls.
 
 ### User Rate Limit
 
- There are several ways that you can get a _429 Rate limit exceeded_ response, but the one you need to be most aware of as a newcomer is the _user rate limit_.
+There are several reasons why you might receive a _429 Rate limit exceeded_ response, but the one you need to be most aware of as a newcomer is the _user rate limit_.
 
 Each API key is limited in the number of requests it can make in a certain length of time:
 
@@ -110,16 +121,21 @@ Each API key is limited in the number of requests it can make in a certain lengt
   </tbody>
 </table>
 
-A point to stress is that that you will likely run into these limits if you put your code into production, or if you try data mining.
+A point to stress is that that you will likely run into these limits if you open your website to the public or you are iteratively [data mining](/guides/datamining) the API.
 
-These limits apply per region. Notice the Development Key is fairly limited.  The next section deals with how to Submit Your Application for a Production Key, as there are several additional requirements you must meet. 
+These limits apply per region. Note that the Development Key's usage fairly limited, but should be enough for proof of concept or personal use.  The next section deals with how to Submit Your Application in order to receive a Production Key, but there are additional requirements you and your application must meet.
 
 ## Submitting your application
 - https://developer.riotgames.com/docs/dev-guidelines
 - https://developer.riotgames.com/docs/app-guidelines
 
 ## Help! And how to get it
-- forums
+
+There is an active community surrounding the Riot API, most notably the [developer forums](https://developer.riotgames.com/discussion/index)
+
+There are dedicated sections for [technical help](https://developer.riotgames.com/discussion/technical-help), [tutorials-libraries](https://developer.riotgames.com/discussion/tutorials-libraries), [bugs](https://developer.riotgames.com/discussion/bugs-feedback), and [general discussion](https://developer.riotgames.com/discussion/index)
+
+
 - how to ask for help
 - writing a good bug
 
@@ -128,6 +144,12 @@ These limits apply per region. Notice the Development Key is fairly limited.  Th
 - Spectating https://developer.riotgames.com/docs/spectating-games
 - Tournament API (https://developer.riotgames.com/docs/tournaments-api)
 - Running your code in production
+
+## Further steps
+- Graceful degradation
+- Caching
+- Code improvement
+
 
 # FAQ
 
@@ -146,7 +168,8 @@ It often takes a little bit of time for Riot to get Data Dragon updates ironed o
 - Post-match Mastery Grades
 
 It's not available in the API (yet?) [src](https://developer.riotgames.com/discussion/community-discussion/show/othK9uma).  Riot appears to have some reservations about releasing this information.
- 
+
+
 # Resources
 
 ## Installing development tools
@@ -157,6 +180,8 @@ Installing java on windows / linux / mac
 Installing nodejs on windows / linux / mac
 Installing python on windows / linux / mac
 C#?
+
+curl for windows / linux / mac
 
 ## Web Frameworks
 
