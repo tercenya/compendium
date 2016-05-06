@@ -42,7 +42,7 @@ There are pros and cons to using a library, which mostly revolves around program
 
 Using a library means you don't have to "invent" another way to call the API, process the JSON output, and return something useful.  On the other hand, you'll need to read the library's documentation carefully, and you will be dependent on said library to some extent when it comes to capabilities and updates.
 
-Most of Riot's API is not so complicated that it requires a heavy investment in programming to build your own functions.   Also, if your project is small, you are unlikely to require more than a handful of routes.  Doing it yourself will also give you a better understanding of the Riot API and the various JSON payloads, at the expensive of having to figure out the details of the Riot API and its various JSON payloads.  Luckily for you, we will walk through the most common routes in the Guides sections using both natively and using libraries, and you can choose the method that best suits your needs.
+Most of Riot's API is not so complicated that it requires a heavy investment in programming to build your own functions.   Also, if your project is small, you are unlikely to require more than a handful of endpoints.  Doing it yourself will also give you a better understanding of the Riot API and the various JSON payloads, at the expensive of having to figure out the details of the Riot API and its various JSON payloads.  Luckily for you, we will walk through the most common endpoints in the Guides sections using both natively and using libraries, and you can choose the method that best suits your needs.
 
 # Prerequisites
 
@@ -50,7 +50,7 @@ Most of Riot's API is not so complicated that it requires a heavy investment in 
 
 We assume you already know what language you want and have it installed on your machine.  In the event you do not, see the [Resources](/resources#tools) page for links to installers for various languages and platforms.
 
-If you are unsure which language you want to learn, I recommend ruby, as g 
+If you are unsure which language you want to learn, ruby is a fair choice
 
 ###  A League of Legends account
 Self explanatory, but you can [register](https://signup.na.leagueoflegends.com/en/signup/index) for free.
@@ -107,7 +107,71 @@ This topic (and many more ways to fail) is discussed a some length in [the forum
 ## Data mining techniques
 
 ## Using Data Dragon
-- https://developer.riotgames.com/docs/static-data
+
+Data Dragon contains _static assets_: things like images, data, art assets for items, champions, masteries, etc.  Riot provides some [documentation](https://developer.riotgames.com/docs/static-data) as well as a functional but not entirely intuitive [tool](http://ddragon.leagueoflegends.com/tool/) to explore the data.  The tool also has a link to a download called _dragontail_ that contains the latest version of all the assets, if you need to include them locally (say, in your API competition submission).
+
+You may need to read their documentation carefully, paying close attention to the yellow-coded, highlighted attributes.  Several item require you to first call the [Static Data](https://developer.riotgames.com/api/methods#!/1055) first.
+
+### Example
+
+To get Splash Art, you will first need to call one of two endpoints, depending on wether you want all champions or just one.  Below, we well lookup just Sona, champion ID 37:
+https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/37?champData=skins&api_key=APIKEY
+
+{
+   "id": 37,
+   "title": "Maven of the Strings",
+   "name": "Sona",
+   "skins": [
+      {
+         "id": 37000,
+         "num": 0,
+         "name": "default"
+      },
+      {
+         "id": 37001,
+         "num": 1,
+         "name": "Muse Sona"
+      },
+      {
+         "id": 37002,
+         "num": 2,
+         "name": "Pentakill Sona"
+      },
+      {
+         "id": 37003,
+         "num": 3,
+         "name": "Silent Night Sona"
+      },
+      {
+         "id": 37004,
+         "num": 4,
+         "name": "Guqin Sona"
+      },
+      {
+         "id": 37005,
+         "num": 5,
+         "name": "Arcade Sona"
+      },
+      {
+         "id": 37006,
+         "num": 6,
+         "name": "DJ Sona"
+      },
+      {
+         "id": 37007,
+         "num": 7,
+         "name": "Sweetheart Sona"
+      }
+   ],
+   "key": "Sona"
+}
+
+
+
+NOTE!  Data dragon urls use the KEY field, not the champion's name.  While most are identical, some champions have a key that is different from their name.  In case of Wukong, the key is "MonkeyKing", which means his splash art URLs looks like: [http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg]
+
+NOTE! File names for the art on abilities, passives, etc, change from time to time.  Don't just blindly assume that links will work after a version change. 
+
 
 ## A sample application
 
@@ -191,7 +255,7 @@ This data isn't provided directly [src]( https://developer.riotgames.com/discuss
 
 Did you remember to bump the version number?  For example, Bard was released in 5.5, so you won't find [Bard](http://gameinfo.na.leagueoflegends.com/en/game-info/champions/bard/) in version [5.4.1](http://ddragon.leagueoflegends.com/cdn/5.4.1/img/champion/Bard.png), but you will in 5.5.1: [http://ddragon.leagueoflegends.com/cdn/5.5.1/img/champion/Bard.png]
 
-You can find a list of valid versions using the [/api/lol/static-data/{region}/v1.2/versions](https://developer.riotgames.com/api/methods#!/1055/3630) route.  Since calls to this route don't count against the rate limit, but the answer does not change very often, consider caching the "latest" version from this route every time your applications starts, rather than hard-coding the version number.
+You can find a list of valid versions using the [/api/lol/static-data/{region}/v1.2/versions](https://developer.riotgames.com/api/methods#!/1055/3630) endpoint, or the [realm version numbers](https://ddragon.leagueoflegends.com/realms/na.json) in Data Dragon  Since calls to these endpoints don't count against the rate limit, but the answer does not change very often, consider caching the "latest" version number every time your applications starts, rather than hard-coding the version number.
 
 It often takes a little bit of time for Riot to get Data Dragon updates ironed out after a new major release, so keep your eye on the forums for announcements.
 
