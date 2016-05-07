@@ -1,0 +1,12 @@
+{
+  "name": "compendium-nodejs-native",
+  "version": "0.0.1",
+  "description": "Riot API sample code in nodejs",
+  "author": "Craig M. Wellington <code@tercenya.com>",
+  "license": "MIT",
+  "dependencies": {
+    "es6-promise": "^3.1.2",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.11.2"
+  }
+}
