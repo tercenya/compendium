@@ -91,20 +91,22 @@ This topic (and many more considerations) is discussed a some length in [the for
 
 - how to read the docs
 
-## Fetching summoner data
+## 1 - Fetching summoner data
 - name encoding
 
-## Fetching match data
+## 2 - Fetch match history
 
-## Fetch match history
+## 3 - Fetching match data
 
-## Fetching a match-in-progress
+## 4 - Look up a match-in-progress
 
-## Leagues
+## 5 - Leagues
 
-## A survey of the remainder
+## 6 - A deep dive: Champion Mastery
 
-## Data mining techniques
+## 7 - A survey of the remainder
+
+## 8 - Data mining techniques
 
 ## Using Data Dragon
 
@@ -112,7 +114,7 @@ Data Dragon contains _static assets_: things like images, data, art assets for i
 
 You may need to read Riot's documentation carefully, paying close attention to the yellow-coded, highlighted attributes.  Several item require you to call the [Static Data](https://developer.riotgames.com/api/methods#!/1055) first in order to build the proper URL.
 
-### Example
+### A Simple Example
 
 Since the formal documentation is a somewhat terse, let's walk through an example: getting champion splash art.
 
@@ -184,6 +186,9 @@ And there we have DJ Sona. http://ddragon.leagueoflegends.com/cdn/img/champion/s
 NOTE!  Data dragon URLs use the KEY field, not the champion's name.  While most are identical, some champions have a key that is different from their name.  In case of Wukong, the key is "MonkeyKing", which means his splash art URLs looks like: [http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg]
 
 NOTE! Some images, such as the icons for skills and passives, require you to look up the entire filename in the API endpoints.  Read the [documentation](https://developer.riotgames.com/docs/static-data) carefully to determine what you have to look up.
+
+### In Practice - Building Champion Mastery Trees
+
 
 ## A sample application
 
