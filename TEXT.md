@@ -7,7 +7,7 @@ As [stated by Riot](http://engineering.riotgames.com/news/riot-games-api-goals-a
 
 Compendium is a step-by-step walkthrough to get you going.
 
-Riot has a Getting Started page.  But there's a lot you can do with the Riot API, and quite a bit more you need to know when you get involved... one page just can't quite cover everything.  This guide introduce you to the concepts and walk you through the code you need to get off the ground when using the API.
+Riot has a Getting Started page.  But there's a lot you can do with the Riot API, and quite a bit more you need to know when you get involved... one page just can't quite cover everything.  This guide introduce you to the concepts and walk you through the code you need to get off the ground.
 
 ## Audience
 
@@ -31,14 +31,14 @@ However I would encourage you to try, as every program every written was once ju
 This guide provides examples in ruby, java, nodejs, python, and php.  Calls against the Riot API also have command-line examples using cURL.
 
 ### Why no javascript?
-Javascript is client-side only.  If you were to embed your secret API key and serve it in a web browser to the public, your key wouldn't be secret anymore!  If you need to use javascript for your front end, you can create a non-isomorphic javascript website that calls a nodejs webservice for all Riot API activities, thereby securing your key.  This guide can get you started on the latter.
+Javascript is client-side only.  If you were to embed your secret API key and serve it in a web browser to the public, your key wouldn't be secret anymore!  If you really love javascript, you can still use it for your front end and UI, but also create a non-isomorphic javascript-powered website that calls a nodejs webservice for all Riot API activities, thereby securing your key.  This guide can get you started on the latter.
 
 
 ## Community libraries
 
 ### Why use a library?
 
-There are pros and cons to using a library, which mostly revolves around programmers' love and hate to [reinvent the wheel](https://sourcemaking.com/antipatterns/reinvent-the-wheel). 
+There are pros and cons to using a library, which mostly revolves around programmers' love and hate to [reinvent the wheel](https://sourcemaking.com/antipatterns/reinvent-the-wheel).
 
 Using a library means you don't have to "invent" another way to call the API, process the JSON output, and return something useful.  On the other hand, you'll need to read the library's documentation carefully, and you will be dependent on said library to some extent when it comes to capabilities and updates.
 
@@ -63,22 +63,22 @@ It's important to have some familiarity with JSON before you start calling the R
 
 ### JSON
 
-JSON is a human and computer readable format for sharing data. It's not as scary as it seems, and most the data you get back from the Riot API can be discerned without too much effort.  Riot's [Full API Reference](https://developer.riotgames.com/api/methods) provides additional detail about many of the JSON responses.
+JSON is a human and computer readable format for sharing data. It's not as scary as it seems, and most the data you get back from the Riot API can be discerned without too much effort.  Riot's [Full API Reference](https://developer.riotgames.com/api/methods) provides additional detail about each attribute in the JSON response.
 
 There are many good tutorials on how to use JSON on the web. For a generic overview, consider [w3schools](http://www.w3schools.com/json/default.asp).
 
-I would *not* recommend trying to read the [specifications](http://www.json.org/); it's a complicated mess.  I *would* recommend using a library in your language of choice to process JSON.
+I would *not* recommend trying to read the [specifications](http://www.json.org/); it's a complicated mess.  I *would* recommend using a library in your language of choice to process the JSON into a usable Array or Hash.
 
 ## Getting a development key
 
-To acquire or look up your Developer API key, log into the Riot [developer website](https://developer.riotgames.com/sign-in) with your League of Legends credentials.  In the middle of your dashboard is your current Development key, along with a button to create a new one.
+To acquire or look up your Developer API key, log into the Riot [developer website](https://developer.riotgames.com/sign-in) with your League of Legends credentials.  In the middle of your dashboard is your Development key, along with a button to create a new one.
 
 ### Keeping your key secure
 - don't check your key into source control (e.g. put it on github)
 - don't post your key on the forums (e.g. when asking for help with your code)
 - don't put your key into javascript (and send it to your clients)
 
-This topic (and many more ways to fail) is discussed a some length in [the forums](https://developer.riotgames.com/discussion/announcements/show/oomYkEK4)
+This topic (and many more considerations) is discussed a some length in [the forums](https://developer.riotgames.com/discussion/announcements/show/oomYkEK4)
 
 # Guides
 
@@ -110,11 +110,20 @@ This topic (and many more ways to fail) is discussed a some length in [the forum
 
 Data Dragon contains _static assets_: things like images, data, art assets for items, champions, masteries, etc.  Riot provides some [documentation](https://developer.riotgames.com/docs/static-data) as well as a functional but not entirely intuitive [tool](http://ddragon.leagueoflegends.com/tool/) to explore the data.  The tool also has a link to a download called _dragontail_ that contains the latest version of all the assets, if you need to include them locally (say, in your API competition submission).
 
-You may need to read their documentation carefully, paying close attention to the yellow-coded, highlighted attributes.  Several item require you to first call the [Static Data](https://developer.riotgames.com/api/methods#!/1055) first.
+You may need to read Riot's documentation carefully, paying close attention to the yellow-coded, highlighted attributes.  Several item require you to call the [Static Data](https://developer.riotgames.com/api/methods#!/1055) first in order to build the proper URL.
 
 ### Example
 
-To get Splash Art, you will first need to call one of two endpoints, depending on wether you want all champions or just one.  Below, we well lookup just Sona, champion ID 37:
+Since the formal documentation is a somewhat terse, let's walk through an example: getting champion splash art.
+
+First, get ID numbers for each champion.
+
+@TODO champion ID lookup
+
+Let's pick Sona, #37.  Second, get the list of skins for that champion.
+
+NOTE: if you have skimmed the [Static Data API](https://developer.riotgames.com/api/methods#!/1055), you might have noticed we could get all the skins at once.  If that's your goal, that's a efficient solution, but for this example it makes more sense to call the single champion endpoint.
+
 https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/37?champData=skins&api_key=APIKEY
 
 {
@@ -166,18 +175,21 @@ https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/37?champData=ski
    "key": "Sona"
 }
 
+Now we have everything we need to build the URL to some beautiful splash art.
 
+@TODO annotate URL
 
-NOTE!  Data dragon urls use the KEY field, not the champion's name.  While most are identical, some champions have a key that is different from their name.  In case of Wukong, the key is "MonkeyKing", which means his splash art URLs looks like: [http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg]
+And there we have DJ Sona. http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_6.jpg
 
-NOTE! File names for the art on abilities, passives, etc, change from time to time.  Don't just blindly assume that links will work after a version change. 
+NOTE!  Data dragon URLs use the KEY field, not the champion's name.  While most are identical, some champions have a key that is different from their name.  In case of Wukong, the key is "MonkeyKing", which means his splash art URLs looks like: [http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg]
 
+NOTE! Some images, such as the icons for skills and passives, require you to look up the entire filename in the API endpoints.  Read the [documentation](https://developer.riotgames.com/docs/static-data) carefully to determine what you have to look up.
 
 ## A sample application
 
 ## Rate Limiting
 
-Riot has a fairly comprehensive explanation of [Rate Limiting](https://developer.riotgames.com/docs/rate-limiting), although the actual rate limits are located on the [API Keys page](https://developer.riotgames.com/docs/api-keys).  Since their documentation is fairly through, and reasonably accessible, we're only going to cover the common pitfalls.
+Riot has a fairly comprehensive explanation of [Rate Limiting](https://developer.riotgames.com/docs/rate-limiting), although the actual rate limits are located on the [API Keys page](https://developer.riotgames.com/docs/api-keys).  Since their documentation is fairly through, and reasonably accessible, we're only going to cover the common pitfalls here.
 
 ### User Rate Limit
 
@@ -207,9 +219,11 @@ Each API key is limited in the number of requests it can make in a certain lengt
   </tbody>
 </table>
 
-A point to stress is that that you will likely run into these limits if you open your website to the public or you are iteratively [data mining](/guides/datamining) the API.
+Each of these limits apply per region.
 
-These limits apply per region. Note that the Development Key's usage fairly limited, but should be enough for proof of concept or personal use.  The next section deals with how to Submit Your Application in order to receive a Production Key, but there are additional requirements you and your application must meet.
+NOTE! You will likely run into the limits on a Development key if you open your website to the public or you are iteratively [data mining](/guides/datamining) the API. Even though the Development Key's usage is fairly limited, it should be enough for a proof of concept or personal project.
+
+The next section deals with how to Submit Your Application in order to receive a Production Key, but there are additional requirements you and your application must meet.
 
 ## Submitting your application
 
@@ -230,9 +244,6 @@ Tips:
 - *Do not* include your API keys or other passwords when posting code.
 - Do include platform, version numbers for your language and any libraries.
 - Clearly state both what happens when you run your code, and your *expected* outcome.
-
-- @TODO example?
-
 
 ## Other topics not covered
 - Item Sets https://developer.riotgames.com/docs/item-sets
