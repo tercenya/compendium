@@ -1,6 +1,1 @@
-{
-  "stage": 1,
-  "optional": ["runtime"],
-  "loose": ["all"],
-  "plugins": ["dev-expression"]
-}
+{ "presets": ["stage-1", "react", "es2015"] }
