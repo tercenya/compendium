@@ -6,9 +6,9 @@ import PageHeader from '../PageHeader';
 import PageFooter from '../PageFooter';
 import A from '../SmartAnchor';
 
-// const sonaJson = require('fs').readFileSync(__dirname + 'sona-skins.json', 'utf8')
-const sonaJson = require('./sona-skins.json');
-const sonaCode = JSON.stringify(sonaJson, null, 2);
+
+import Samples from '../Samples';
+const sonaCode = Samples.SonaSkins;
 
 const GuidesPage = (props) => {
   return (
@@ -29,12 +29,12 @@ const GuidesPage = (props) => {
               <p>
                 Data Dragon contains <i>static assets</i>: things like images, data, art assets for items, champions, masteries, etc.
                 Riot provides some <A href="https://developer.riotgames.com/docs/static-data">documentation</A> as well as a functional but not entirely intuitive <A href="http://ddragon.leagueoflegends.com/tool/">tool</A> to explore the data.
-                The tool also has a link to a download called _dragontail_ that contains the latest version of all the assets, if you need to include them locally (say, in your API competition submission).
+                The tool also has a link to a download called <i>dragontail</i> that contains the latest version of all the assets, if you need to include them locally (say, in your API competition submission).
               </p>
 
               <p>
                 You may need to read Riot's documentation carefully, paying close attention to the yellow-coded, highlighted attributes.
-                Several item require you to call the <A href="https://developer.riotgames.com/api/methods#!/1055">Static Data</A> first in order to build the proper URL.
+                Several item require you to call the <A href="https://developer.riotgames.com/api/methods#!/1055">Static Data endpoint</A> first in order to build the proper URL.
               </p>
 
               <h5>A Simple Example</h5>
@@ -44,7 +44,8 @@ const GuidesPage = (props) => {
               </p>
 
               <p>
-                First, get ID numbers for each champion. Let&apos;s pick Sona, summonerId 37.  Second, get the list of skins for that champion.
+                First, get ID numbers for each champion. Let&apos;s pick Sona, with summonerId 37.
+                Second, get the list of skins for that champion.
               </p>
 
               <code>
