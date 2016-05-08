@@ -54,6 +54,8 @@
       echo "*** {$summoner_id}'s current game is:\n";
       echo "gameId: {$response->gameId}\n";
       echo "gameMode: {$response->gameMode}\n\n";
+
+      break;
   }
 
 

@@ -28,9 +28,9 @@ fetch(uri).then( (response) => {
   //   "gameType": "MATCHED_GAME",
   //   "gameQueueConfigId": 65,
   //   "participants": [...],
-  //   "observers": { ... },
+  //   "observers": {...},
   //   "platformId": "NA1",
-  //   "bannedChampions": [],
+  //   "bannedChampions": [...],
   //   "gameStartTime": 1462588238241,
   //   "gameLength": 160
   // }
@@ -53,7 +53,7 @@ fetch(uri).then( (response) => {
     break
 
     default:
-    
+
     console.log(`unhandled code: ${code}`)
     break
 

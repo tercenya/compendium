@@ -16,19 +16,22 @@ platform_id = 'NA1'
 uri = URI("https://na.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/#{platform_id}/#{summoner_id}?api_key=#{API_KEY}")
 
 # call the Riot API
-# if there is no game in progress, you will get a 404
 http_response = Net::HTTP.get_response(uri)
 
+# only parse the JSON output if the the call was successful
+#   if there is no game in progress, you will get a 404, instead of a 200
+
 case http_response
-when Net::HTTPNotFound
+when Net::HTTPNotFound # 404
   puts "*** no game in progress"
   exit
-when Net::HTTPSuccess
+
+when Net::HTTPSuccess # 200
   json = http_response.body
 
-  # only parse the JSON output if the response was successful
   # parse the JSON
-  # response will take the form of
+
+  # a successful response will take the form of
   # {
   #   "gameId": 2179958108,
   #   "mapId": 12,
@@ -36,9 +39,9 @@ when Net::HTTPSuccess
   #   "gameType": "MATCHED_GAME",
   #   "gameQueueConfigId": 65,
   #   "participants": [...],
-  #   "observers": { ... },
+  #   "observers": {...},
   #   "platformId": "NA1",
-  #   "bannedChampions": [],
+  #   "bannedChampions": [...],
   #   "gameStartTime": 1462588238241,
   #   "gameLength": 160
   # }

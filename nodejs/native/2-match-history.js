@@ -16,7 +16,7 @@ const uri = `https://na.api.pvp.net/api/lol/na/v2.2/matchlist/by-summoner/${summ
 // call the Riot API
 fetch(uri).then( (response) => {
   // parse as JSON
-  
+
   // response will take the form of:
   // {
   //    "matches": [
@@ -31,7 +31,7 @@ fetch(uri).then( (response) => {
   //          "platformId": "NA1",
   //          "lane": "BOTTOM"
   //       },
-  //       (...et al...)
+  //       (...)
   //     ],
   //    "totalGames": 120,
   //    "startIndex": 0,

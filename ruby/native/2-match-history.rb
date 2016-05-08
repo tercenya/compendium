@@ -31,7 +31,7 @@ json = Net::HTTP.get(uri)
 #          "platformId": "NA1",
 #          "lane": "BOTTOM"
 #       },
-#       (...et al...)
+#       (...)
 #     ],
 #    "totalGames": 120,
 #    "startIndex": 0,
