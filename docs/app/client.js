@@ -2,7 +2,7 @@ import CodeMirror from 'codemirror';
 import 'codemirror/addon/runmode/runmode';
 import 'codemirror/mode/jsx/jsx';
 
-import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { browserHistory } from 'react-router'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router} from 'react-router';
@@ -32,9 +32,7 @@ global.CodeMirror = CodeMirror;
 Root.assetBaseUrl = window.ASSET_BASE_URL;
 Root.propData = window.PROP_DATA;
 
-const history = createBrowserHistory();
-
 ReactDOM.render(
-  <Router history={history} children={routes} />,
+  <Router history={browserHistory} children={routes} />,
   document
 );
