@@ -19,7 +19,7 @@ import './assets/style.css';
 import './assets/compendium.scss';
 
 import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/solarized.css';
+import 'codemirror/theme/lesser-dark.css';
 import 'codemirror/theme/material.css';
 import './assets/CodeMirror.css';
 
