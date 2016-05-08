@@ -5,23 +5,23 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const NAV_LINKS = {
   'introduction': {
-    link: '/introduction.html',
+    link: '/introduction',
     title: 'introduction'
   },
   'prerequisites': {
-    link: '/prerequisites.html',
+    link: '/prerequisites',
     title: 'prerequisites'
   },
   'guides': {
-    link: '/guides.html',
+    link: '/guides',
     title: 'guides'
   },
   'faq': {
-    link: '/faq.html',
+    link: '/faq',
     title: 'faq'
   },
   'resources': {
-    link: '/resources.html',
+    link: '/resources',
     title: 'resources'
   }
 };
@@ -63,7 +63,7 @@ const NavMain = (props) => {
         <Nav role="navigation" key='right' pullRight>
           <li key="github-link">
             <a href="https://github.com/react-bootstrap/react-bootstrap" target="_blank">github</a>
-          </li>            
+          </li>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

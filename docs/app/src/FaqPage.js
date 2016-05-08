@@ -4,45 +4,70 @@ import NavMain from './NavMain';
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
 
-export default class Page extends React.Component {
-  render() {
-    return (
-        <div>
-          <NavMain activePage="support" />
+const FaqPage = (props) => {
+  return (
+    <div>
+      <NavMain activePage="support" />
 
-          <PageHeader
-            title="Need help?"
-            subTitle="Community resources for answering your React-Bootstrap questions." />
+      <PageHeader
+        title="Frequently Asked Question"
+        subTitle="As evidenced by the forums" />
 
-          <div className="container compendium-container">
-            <div className="row">
-              <div className="col-md-9" role="main">
-                <div className="compendium-section">
-                  <p className="lead">Stay up to date on the development of React-Bootstrap and reach out to the community with these helpful resources.</p>
+      <div className="container compendium-container">
+        <div className="row">
+          <div className="col-md-9" role="main">
+            <div className="compendium-section">
+              <h2>Frequently Asked Questions</h2>
 
-                  <h3>Stack Overflow</h3>
-                  <p><a href="http://stackoverflow.com/questions/ask">Ask questions</a> about specific problems you have faced, including details about what exactly you are trying to do. Make sure you tag your question with <code className="js">react-bootstrap</code>. You can also read through <a href="http://stackoverflow.com/questions/tagged/react-bootstrap">existing React-Bootstrap questions</a>.</p>
+              <ol>
+                <li>
+                  <dl>
+                    <dt>I can't find a summoner's ELO/MMR</dt>
+                    <dd>
+                      This data isn't provided directly [<A href="https://developer.riotgames.com/discussion/community-discussion/show/qdlrnG3s">src</A>].
+                      But you can compare a summoner's highest league in a former season, or use a summoner's current league plus their current leaguePoints to get a numeric value of relative standing.
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>I can't find <i>new champion X</i> in Data Dragon!</dt>
+                    <dd>
+                      <p>
+                        Did you remember to bump the version number?  For example, Bard was released in 5.5, so you won't find <A href="http://gameinfo.na.leagueoflegends.com/en/game-info/champions/bard/">Bard</A> in version <A href="http://ddragon.leagueoflegends.com/cdn/5.4.1/img/champion/Bard.png">5.4.1</A>, but you will in 5.5.1: [http://ddragon.leagueoflegends.com/cdn/5.5.1/img/champion/Bard.png]
+                      </p>
 
-                  <h3>Live help</h3>
-                  <p>Bring your questions and pair with other react-bootstrap users in a <a href="http://start.thinkful.com/react/?utm_source=github&utm_medium=badge&utm_campaign=react-bootstrap">live Thinkful hangout</a>. Hear about the challenges other developers are running into, or screenshare your own code with the group for feedback.</p>
+                      <p>
+                        You can find a list of valid versions using the <A href="https://developer.riotgames.com/api/methods#!/1055/3630">/api/lol/static-data/{region}/v1.2/versions</A> endpoint,
+                        or the <A href="https://ddragon.leagueoflegends.com/realms/na.json">realm version numbers</A> in Data Dragon.
 
-                  <h3>Chat rooms</h3>
-                  <p>Discuss questions in the <code className="js">#react-bootstrap</code> channel on the <a href="http://www.reactiflux.com/">Reactiflux Slack</a> or on <a href="https://gitter.im/react-bootstrap/react-bootstrap">Gitter</a>.</p>
+                        Since calls to these endpoints don't count against the rate limit, but the answer does not change very often, consider caching the "latest" version number every time your applications starts, rather than hard-coding the version number.
+                      </p>
 
-                  <h3>GitHub issues</h3>
-                  <p>The issue tracker is the preferred channel for bug reports, features requests and submitting pull requests. See more about how we use issues in the <a href="https://github.com/react-bootstrap/react-bootstrap/blob/master/CONTRIBUTING.md#issues">contribution guidelines</a>.</p>
-
-                </div>
-              </div>
+                      <p>
+                        It often takes a little bit of time for Riot to get Data Dragon updates ironed out after a new major release, so keep your eye on the forums for announcements.
+                      </p>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>I can't find the post-match Mastery Grades</dt>
+                    <dd>
+                      It's not available in the API (yet?) [<A href="https://developer.riotgames.com/discussion/community-discussion/show/othK9uma">src</A>].
+                      Riot has some reservations about releasing this information.
+                    </dd>
+                  </dl>
+                </li>
+              </ol>
             </div>
           </div>
-
-          <PageFooter />
         </div>
-      );
-  }
+      </div>
 
-  shouldComponentUpdate() {
-    return false;
-  }
-}
+      <PageFooter />
+    </div>
+  );
+};
+
+export default FaqPage;
