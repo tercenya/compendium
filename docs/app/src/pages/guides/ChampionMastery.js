@@ -2,13 +2,13 @@ import React from 'react';
 
 import { CodeExample, CondLang, NavMain, PageHeader, PageFooter, A } from '../../components';
 
-const MatchHistory = (props) => {
+const ChampionMastery = (props) => {
   return (
     <div>
       <NavMain activePage="guides" />
 
       <PageHeader
-        title="Match History"
+        title="A Deep Dive: Champion Mastery"
         subTitle=""
       />
 
@@ -16,7 +16,7 @@ const MatchHistory = (props) => {
         <div className="row">
           <div className="col-md-12" role="main">
             <div className="compendium-section">
-              <h2>Guide: Fetching Match History</h2>
+              <h2>Guide: Champion Mastery</h2>
 
               <CondLang lang='ruby'>
                 <CodeExample lang='ruby' code='RUBY WINS!'/>
@@ -30,4 +30,4 @@ const MatchHistory = (props) => {
   );
 };
 
-export default MatchHistory;
+export default ChampionMastery;

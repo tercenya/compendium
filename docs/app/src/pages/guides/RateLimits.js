@@ -5,7 +5,7 @@ import { CodeExample, NavMain, PageHeader, PageFooter, A } from '../../component
 const  = (props) => {
   return (
     <div>
-      <NavMain activePage="ratinglimits" />
+      <NavMain activePage="guides" />
 
       <PageHeader
         title="Rate Limits"

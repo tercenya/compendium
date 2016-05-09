@@ -115,7 +115,7 @@ class CodeMirrorEditor extends React.Component {
 
   componentDidUpdate() {
     if (this.props.readOnly) {
-      this.editor.setValue(this.props.codeText);
+      this.editor.setValue(this.props.code);
     }
   }
 
@@ -133,11 +133,11 @@ class CodeMirrorEditor extends React.Component {
       editor = (
         <CodeExample
           lang="jsx"
-          codeText={this.props.codeText}
+          code={this.props.code}
         />
       );
     } else {
-      editor = <textarea ref="editor" defaultValue={this.props.codeText} />;
+      editor = <textarea ref="editor" defaultValue={this.props.code} />;
     }
 
     return (
@@ -163,7 +163,7 @@ const ReactPlayground = React.createClass({
   mixins: [selfCleaningTimeout],
 
   propTypes: {
-    codeText: React.PropTypes.string.isRequired,
+    code: React.PropTypes.string.isRequired,
     transformer: React.PropTypes.func
   },
 
@@ -177,7 +177,7 @@ const ReactPlayground = React.createClass({
 
   getInitialState() {
     return {
-      code: this.props.codeText,
+      code: this.props.code,
       codeChanged: false,
       showCode: false
     };
@@ -195,7 +195,7 @@ const ReactPlayground = React.createClass({
     const mountNode = null;  // eslint-disable-line no-unused-vars
 
     try {
-      const compiledCode = this.props.transformer(this.props.codeText);
+      const compiledCode = this.props.transformer(this.props.code);
 
       /* eslint-disable */
       eval(compiledCode);
@@ -262,7 +262,7 @@ const ReactPlayground = React.createClass({
         key="jsx"
         onChange={this.handleCodeChange}
         className="highlight"
-        codeText={this.state.code}
+        code={this.state.code}
       />
     );
   },

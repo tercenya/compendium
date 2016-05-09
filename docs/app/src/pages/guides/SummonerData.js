@@ -5,7 +5,7 @@ import { CodeExample, CondLang, NavMain, PageHeader, PageFooter, A } from '../..
 const SummonerData = (props) => {
   return (
     <div>
-      <NavMain activePage="summonerdata" />
+      <NavMain activePage="guides" />
 
       <PageHeader
         title="Summoner Data"
@@ -19,8 +19,8 @@ const SummonerData = (props) => {
               <h2>Guide: Fetching Summoner Data</h2>
 
               <CondLang lang='ruby'>
-                <CodeExample lang='ruby' codeText='RUBY WINS!'/>
-                <CodeExample lang='php' codeText='php stinks!'/>
+                <CodeExample lang='ruby' code='RUBY WINS!'/>
+                <CodeExample lang='php' code='php stinks!'/>
               </CondLang>
             </div>
           </div>

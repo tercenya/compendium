@@ -5,7 +5,7 @@ import { NavMain, PageHeader, PageFooter, A } from '../components';
 const Guides = (props) => {
   return (
     <div>
-      <NavMain activePage="introduction" />
+      <NavMain activePage="guides" />
 
       <PageHeader
         title="Guides"
@@ -18,27 +18,23 @@ const Guides = (props) => {
             <div className="compendium-section">
               <h2>Table of Contents</h2>
 
-              <p>Overview: How to use a JSON API</p>
+              <p><A href="/guides/api/">How to use a JSON API</A></p>
 
-              <p>Introduction to the Riot API</p>
+              <p><A href="/guides/riot/">Introduction to the Riot API</A></p>
 
-              <p><A href="/guides/summonerdata/">Example 1 - Fetching summoner data</A></p>
+              <p><A href="/guides/summoner-data/">Example 1 - Fetching summoner data</A></p>
 
-              <p>Example 2 - Fetch match history</p>
+              <p><A href="/guides/match-history/">Example 2 - Fetch match history</A></p>
 
-              <p>Example 3 - Fetching match data</p>
+              <p><A href="/guides/match-data/">Example 3 - Fetching match data</A></p>
 
-              <p>Example 4 - Look up a match-in-progress</p>
+              <p><A href="/guides/current-game/">Example 4 - Look up a match-in-progress</A></p>
 
-              <p>Example 5 - Leagues</p>
+              <p><A href="/guides/champion-mastery/">Example 5 - A deep dive: Champion Mastery</A></p>
 
-              <p>Example 6 - A deep dive: Champion Mastery</p>
+              <p><A href='/guides/data-dragon/'>Using Data Dragon</A></p>
 
-              <p>Example 7 - A survey of the remainder</p>
-
-              <p>Data mining techniques</p>
-
-              <p><A href='/guides/datadragon/'>Using Data Dragon</A></p>
+              <p><A href="/guides/etc/">A survey of the remainder</A></p>
             </div>
           </div>
         </div>

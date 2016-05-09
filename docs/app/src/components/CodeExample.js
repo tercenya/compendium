@@ -6,7 +6,7 @@ export default class CodeExample extends React.Component {
     return (
       <pre className="cm-s-lesser-dark cm-s-dark CodeMirror">
         <code>
-          {this.props.codeText}
+          {this.props.code}
         </code>
       </pre>
     );
@@ -18,7 +18,7 @@ export default class CodeExample extends React.Component {
     }
 
     CodeMirror.runMode(
-      this.props.codeText,
+      this.props.code,
       this.props.lang || 'jsx',
       ReactDOM.findDOMNode(this).children[0]
     );

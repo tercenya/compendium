@@ -1,0 +1,12 @@
+{
+   "id": 37,
+   "title": "Maven of the Strings",
+   "name": "Sona",
+   "key": "Sona",
+   "info": {
+      "defense": 2,
+      "magic": 8,
+      "difficulty": 4,
+      "attack": 5
+   }
+}

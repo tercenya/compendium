@@ -5,7 +5,7 @@ import { NavMain, PageHeader, PageFooter, A } from '../components';
 const Faq = (props) => {
   return (
     <div>
-      <NavMain activePage="support" />
+      <NavMain activePage="faq" />
 
       <PageHeader
         title="Frequently Asked Question"

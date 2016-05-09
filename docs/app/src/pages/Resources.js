@@ -15,9 +15,8 @@ const Resources = (props) => {
         <div className="row">
           <div className="col-md-9" role="main">
             <div className="compendium-section">
-              <a name='tools'>
-                <h4>Development tools and languages</h4>
-              </a>
+              <a name='tools'></a>
+              <h4>Development tools and languages</h4>
 
               Installing ruby on windows / linux / mac
               Installing php on windows / linux / mac

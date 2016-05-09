@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router';
 import { Navbar, Nav } from 'react-bootstrap';
+import FontAwesomeIcon from './FontAwesomeIcon';
 
 const NAV_LINKS = {
   'introduction': {
@@ -62,7 +63,11 @@ const NavMain = (props) => {
         </Nav>
         <Nav role="navigation" key='right' pullRight>
           <li key="github-link">
-            <a href="https://github.com/react-bootstrap/react-bootstrap" target="_blank">github</a>
+            <a href="https://github.com/tercenya/compendium" target="_blank">
+              <FontAwesomeIcon icon="github" />
+              &nbsp;
+              github
+            </a>
           </li>
         </Nav>
       </Navbar.Collapse>

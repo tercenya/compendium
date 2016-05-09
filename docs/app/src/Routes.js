@@ -14,6 +14,13 @@ import NotFound from './pages/NotFound';
 // guides
 import DataDragon from './pages/guides/DataDragon';
 import SummonerData from './pages/guides/SummonerData';
+import MatchData from './pages/guides/MatchData';
+import MatchHistory from './pages/guides/MatchHistory';
+import Overview from './pages/guides/Overview';
+import Riot from './pages/guides/Riot';
+import ChampionMastery from './pages/guides/ChampionMastery';
+import CurrentGame from './pages/guides/CurrentGame';
+import Etc from './pages/guides/Etc';
 
 export default (
   <Route path="/" component={Root}>
@@ -22,8 +29,16 @@ export default (
     <Route path="prerequisites" component={Prerequisites} />
     <Route path="guides">
       <IndexRoute component={Guides} />
-      <Route path="summonerdata" component={SummonerData} />
-      <Route path="datadragon" component={DataDragon} />
+      <Route path="summoner-data" component={SummonerData} />
+      <Route path="match-history" component={MatchHistory} />
+      <Route path="match-data" component={MatchData} />
+      <Route path="data-dragon" component={DataDragon} />
+      <Route path="current-game" component={CurrentGame} />
+      <Route path="champion-mastery" component={ChampionMastery} />
+
+      <Route path="api" component={Overview} />
+      <Route path="riot" component={Riot} />
+      <Route path="etc" component={Etc} />
     </Route>
     <Route path="faq" component={Faq} />
     <Route path="resources" component={Resources} />

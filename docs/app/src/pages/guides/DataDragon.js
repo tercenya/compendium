@@ -9,7 +9,7 @@ const sonaCode = SampleCode.DataDragon.SonaSkins;
 const GuidesPage = (props) => {
   return (
     <div>
-      <NavMain activePage="datadragon" />
+      <NavMain activePage="guides" />
 
       <PageHeader
         title="Data Dragon"
@@ -59,7 +59,7 @@ const GuidesPage = (props) => {
 
               <CodeExample
                 lang='jsx'
-                codeText={sonaCode}
+                code={sonaCode}
               />
 
               <p>
