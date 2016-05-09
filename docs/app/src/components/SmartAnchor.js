@@ -6,7 +6,7 @@ const SmartAnchor = (props) => {
   const target = external ? '_blank' : null;
   const suffix = external ? <FontAwesomeIcon className='smart-anchor-suffix' icon='external-link' />: null;
   return (
-    <a target={target} {...props}>
+    <a target={target} {...props} className='nobreak'>
       {props.children}
       {suffix}
     </a>
