@@ -15,7 +15,7 @@
   border-radius: 5%;
 }
 
-///// Navbar 
+///// Navbar
 
 .compendium-nav .navbar-brand .compendium-logo {
   width: 30px;
@@ -41,18 +41,18 @@
   padding-left: 0;
   margin-top: 20px;
   color: #999;
-  
+
   li {
     display: inline;
     padding: 0 2px;
-    
-    &:first-child { padding-left: 0; }    
+
+    &:first-child { padding-left: 0; }
   }
 }
 
 .compendium-disclaimer {
   @extend .compendium-footer-links;
-  
+
   li {  display: block; }
 }
 
@@ -73,3 +73,5 @@
 .highlight pre code {
   color: #ddd;
 }
+
+.auto { width: auto; }

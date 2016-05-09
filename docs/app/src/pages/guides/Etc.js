@@ -30,8 +30,11 @@ const Overview = (props) => {
                 </li>
                 <li>
                   <dl>
-                    <dt><A href="https://developer.riotgames.com/api/methods#!/977">Features Games</A></dt>
-                    <dd>Returns a list of "features games", similar to what you see in the bottom right-hand corner of the LoL Client.</dd>
+                    <dt><A href="https://developer.riotgames.com/api/methods#!/977">Featured Games</A></dt>
+                    <dd>
+                      Returns a list of "featured games", similar to what you see in the bottom right-hand corner of the LoL Client.
+                      This is one of the few ways to find arbitrary games, but it you cannot aggressively datamine it - the list only updates every so often.
+                    </dd>
                   </dl>
                 </li>
                 <li>
@@ -77,8 +80,8 @@ const Overview = (props) => {
                   <dl>
                     <dt><A href="https://developer.riotgames.com/docs/spectating-games">Spectating Games</A></dt>
                     <dd>
-                      By using the Current Game API, you can fetch an encryption key, then pass it on the command-line to the LoL client to
-                      start watch a currently running game in spectator mode.
+                      By using the <A href='/guides/current-game/'>Current Game API</A>, you can fetch an encryption key, then pass it on the command-line to the LoL client to
+                      watch a currently running game in spectator mode.
                     </dd>
                   </dl>
                 </li>
