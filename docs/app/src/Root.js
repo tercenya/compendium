@@ -53,6 +53,7 @@ const Root = React.createClass({
         <link href="${Root.assetBaseUrl}/assets/bundle.css" rel="stylesheet">
         <link href="${Root.assetBaseUrl}/assets/morellonomicon-shift92.png" type="image/png" rel="icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css">
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

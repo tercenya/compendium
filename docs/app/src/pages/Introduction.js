@@ -16,21 +16,16 @@ const Introduction = (props) => {
         <div className="row">
           <div className="col-md-12" role="main">
             <div className="compendium-section">
-
-
-              <h2>Compendium is a neophyte's guide to the Riot Games API for League of Legends.</h2>
+              <h2>Compendium is a step-by-step walkthrough to get you started with the Riot API.</h2>
 
               <p>
                 As <A href='http://engineering.riotgames.com/news/riot-games-api-goals-and-design'>stated by Riot</A>, the purpose of the API is to engage the community.
                 However, a survey of the developer forums shows many users struggle to get started.
               </p>
 
-              <p>Compendium is a step-by-step walkthrough to get you going.</p>
-
               <p>
                 Riot has a Getting Started page.
                 But there's a lot you can do with the Riot API, and quite a bit more you need to know when you get involved... one page just can't quite cover everything.  This guide introduce you to the concepts and walk you through the code you need to get off the ground.</p>
-
 
               <h4>Compendium targets the novice programmer.</h4>
 

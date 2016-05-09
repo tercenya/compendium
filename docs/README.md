@@ -2,7 +2,11 @@
 
 The documentation is a standard [React](https://facebook.github.io/react/) single-page webapp.  When built into production, [webpack](https://webpack.github.io/) will distill all end pages into html files that can be uploaded to [github pages](https://pages.github.com/).
 
-The build system is largely based off of the (highly recommended) [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) component.
+The build system is largely based off of the (highly recommended) [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) component, which is also a dependency.
+
+Glyphicons are eschewed in favor of [FontAwesome](https://fortawesome.github.io/Font-Awesome/) and [Font MFizz](http://fizzed.com/oss/font-mfizz)
+
+
 
 ## Local Setup
 

@@ -10,11 +10,7 @@ const PageFooter = (props) => {
         <ul className="compendium-footer-links">
           <li>&copy; 2016 Craig M. Wellington <i>'Arinya'</i></li>
           <li>·</li>
-          <li>
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-              <img alt="Creative Commons License" style={{'borderWidth': 0}} src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-            </a>
-          </li>
+          <li>MIT license</li>
           <li>·</li>
           <li>v{version}</li>
         </ul>

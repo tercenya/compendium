@@ -9,6 +9,7 @@ import NavMain from './components/NavMain.js';
 import PageFooter from './components/PageFooter.js';
 import PageHeader from './components/PageHeader.js';
 import SubNav from './components/SubNav.js';
+import MFizzIcon from './components/MFizzIcon.js';
 
 // an alias
 const A = SmartAnchor;
@@ -22,5 +23,6 @@ export {
   NavMain,
   PageFooter,
   PageHeader,
-  SubNav
+  SubNav,
+  MFizzIcon
 };
