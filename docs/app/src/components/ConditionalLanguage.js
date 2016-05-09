@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import CodeExample from './CodeExample';
 
-export default class CondLang extends React.Component {
+export default class ConditionalLanguage extends React.Component {
   render() {
     const lang = this.props.lang || 'ruby';
 
