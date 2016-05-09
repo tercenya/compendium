@@ -1,33 +1,33 @@
 import React from 'react';
-import {IndexRoute, Route} from 'react-router';
+import { IndexRoute, Route } from 'react-router';
 
 import Root from './Root';
 
-import HomePage from './pages/HomePage';
-import IntroductionPage from './pages/IntroductionPage';
-import PrerequisitesPage from './pages/PrerequisitesPage';
-import GuidesPage from './pages/GuidesPage';
-import FaqPage from './pages/FaqPage';
-import ResourcesPage from './pages/ResourcesPage';
-import NotFoundPage from './pages/NotFoundPage';
+import Home from './pages/Home';
+import Introduction from './pages/Introduction';
+import Prerequisites from './pages/Prerequisites';
+import Guides from './pages/Guides';
+import Faq from './pages/Faq';
+import Resources from './pages/Resources';
+import NotFound from './pages/NotFound';
 
 // guides
-import DataDragonPage from './pages/guides/DataDragon';
-import SummonerDataPage from './pages/guides/SummonerDataPage';
+import DataDragon from './pages/guides/DataDragon';
+import SummonerData from './pages/guides/SummonerData';
 
 export default (
   <Route path="/" component={Root}>
-    <IndexRoute component={HomePage} />
-    <Route path="introduction" component={IntroductionPage} />
-    <Route path="prerequisites" component={PrerequisitesPage} />
+    <IndexRoute component={Home} />
+    <Route path="introduction" component={Introduction} />
+    <Route path="prerequisites" component={Prerequisites} />
     <Route path="guides">
-      <IndexRoute component={GuidesPage} />
-      <Route path="summonerdata" component={SummonerDataPage} />
-      <Route path="datadragon" component={DataDragonPage} />
+      <IndexRoute component={Guides} />
+      <Route path="summonerdata" component={SummonerData} />
+      <Route path="datadragon" component={DataDragon} />
     </Route>
-    <Route path="faq" component={FaqPage} />
-    <Route path="resources" component={ResourcesPage} />
+    <Route path="faq" component={Faq} />
+    <Route path="resources" component={Resources} />
 
-    <Route path="*" component={NotFoundPage} />
+    <Route path="*" component={NotFound} />
   </Route>
 );

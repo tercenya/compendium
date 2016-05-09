@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Glyphicon, Label, Alert } from 'react-bootstrap';
 import { NavMain, PageHeader, PageFooter, A } from '../components';
 
-export default class HomePage extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
       <div>
@@ -16,7 +16,7 @@ export default class HomePage extends React.Component {
               Compendium
             </h1>
             <p className="lead">
-              <span>Arinya's Guide to the Riot Games API</span>
+              <span>Arinya&apos;s Guide to the Riot Games API</span>
             </p>
           </div>
         </main>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavMain, PageHeader, PageFooter, A } from '../components';
 
-const IntroductionPage = (props) => {
+const Introduction = (props) => {
   return (
     <div>
       <NavMain activePage="introduction" />
@@ -95,4 +95,4 @@ const IntroductionPage = (props) => {
   );
 };
 
-export default IntroductionPage;
+export default Introduction;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavMain, PageHeader, PageFooter, A } from '../components';
 
-const ResourcesPage = (props) => {
+const Resources = (props) => {
   return (
     <div>
       <NavMain activePage="resources" />
@@ -38,4 +38,4 @@ const ResourcesPage = (props) => {
 };
 
 
-export default ResourcesPage;
+export default Resources;

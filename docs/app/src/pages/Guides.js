@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavMain, PageHeader, PageFooter, A } from '../components';
 
-const GuidesPage = (props) => {
+const Guides = (props) => {
   return (
     <div>
       <NavMain activePage="introduction" />
@@ -48,4 +48,4 @@ const GuidesPage = (props) => {
 };
 
 
-export default GuidesPage;
+export default Guides;

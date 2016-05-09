@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavMain, PageHeader, PageFooter, A } from '../components';
 
-const FaqPage = (props) => {
+const Faq = (props) => {
   return (
     <div>
       <NavMain activePage="support" />
@@ -68,4 +68,4 @@ const FaqPage = (props) => {
   );
 };
 
-export default FaqPage;
+export default Faq;
