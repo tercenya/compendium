@@ -13,7 +13,7 @@ const GuidesPage = (props) => {
 
       <PageHeader
         title="Data Dragon"
-        subTitle="Images, art, and static assets"
+        subTitle="Building URLS to images, art, and static assets"
       />
 
       <div className="container compendium-container">
@@ -49,7 +49,7 @@ const GuidesPage = (props) => {
               </code>
 
               <p>
-                NOTE: if you have skimmed the <A href="https://developer.riotgames.com/api/methods#!/1055">Static Data API</A>, you might have noticed we could get all the skins at once.  If that's your goal, that's a efficient solution, but for this example it makes more sense to call the single champion endpoint.
+                NOTE: if you have skimmed the <A href="https://developer.riotgames.com/api/methods#!/1055">Static Data API</A>, you might have noticed we could get all the skins at once.  If that's your goal, using a single call is an efficient solution, but for this example it's simpler for this example to call the single champion endpoint.
               </p>
 
               <code>
@@ -74,13 +74,13 @@ const GuidesPage = (props) => {
                 And there we have DJ Sona. <A href="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_6.jpg">http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_6.jpg</A>
               </p>
 
-              NOTE!  Data dragon URLs use the KEY field, not the champion's name.  While most are identical, some champions have a key that is different from their name.  In case of Wukong, the key is "MonkeyKing", which means his splash art URLs looks like: [http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg]
+              <p>
+                NOTE!  Data dragon URLs use the KEY field, not the champion's name.  While most are identical, some champions have a key that is different from their name.  In case of Wukong, the key is "MonkeyKing", which means his splash art URLs looks like: <A href="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg">http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg</A>
+              </p>
 
-              NOTE! Some images, such as the icons for skills and passives, require you to look up the entire filename in the API endpoints.  Read the <A href="https://developer.riotgames.com/docs/static-data">documentation</A> carefully to determine what you have to look up.
-
-              <h5>In Practice - Building Champion Mastery Trees</h5>
-              <code>@TODO</code>
-
+              <p>
+                NOTE ! Some images, such as the icons for skills and passives, require you to look up the entire filename in the API endpoints.  Read the <A href="https://developer.riotgames.com/docs/static-data">documentation</A> carefully to determine what you have to look up.
+              </p>
             </div>
           </div>
         </div>
