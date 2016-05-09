@@ -17,8 +17,8 @@ const Introduction = (props) => {
           <div className="col-md-12" role="main">
             <div className="compendium-section">
 
-              <h4>Purpose</h4>
-              <p>Compendium is a neophyte's guide to the Riot Games API for League of Legends.</p>
+
+              <h2>Compendium is a neophyte's guide to the Riot Games API for League of Legends.</h2>
 
               <p>
                 As <A href='http://engineering.riotgames.com/news/riot-games-api-goals-and-design'>stated by Riot</A>, the purpose of the API is to engage the community.
@@ -31,9 +31,8 @@ const Introduction = (props) => {
                 Riot has a Getting Started page.
                 But there's a lot you can do with the Riot API, and quite a bit more you need to know when you get involved... one page just can't quite cover everything.  This guide introduce you to the concepts and walk you through the code you need to get off the ground.</p>
 
-              <h4>Audience</h4>
 
-              <p>Compendium targets the novice programmer.</p>
+              <h4>Compendium targets the novice programmer.</h4>
 
               <p>
                 Perhaps you have taken a course or two on programming?
@@ -44,7 +43,7 @@ const Introduction = (props) => {
               <p>This is the guide for you.</p>
 
               <p>
-                That said, if you are completely new to programming, even this guide may pose a challenge.
+                That said, if you are <i>completely</i> new to programming, even this guide may pose a challenge.
                 However I would encourage you to try, as every program every written was once just the desire of a would-be programmer, who they themselves set forth to learn just the same.  We won't teach you how to program from scratch, although there is a lengthy list of <A href='/resources'>Resources</A> available in the appendix if you need primers on the programming concepts and languages discussed here.
               </p>
 
