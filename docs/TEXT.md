@@ -218,8 +218,8 @@ Each API key is limited in the number of requests it can make in a certain lengt
     </tr>
     <tr>
       <td>Production</th>
-      <td>3,000</th>
-      <td>180,000</th>
+      <td>3,000</td>
+      <td>180,000</td>
     </tr>
   </tbody>
 </table>

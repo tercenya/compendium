@@ -3,7 +3,7 @@ import baseConfig, { options } from './base.config';
 
 export default _.extend({}, baseConfig, {
   entry: {
-    'react-bootstrap': './src/index.js'
+    'compendium': './src/index.js'
   },
 
   output: {

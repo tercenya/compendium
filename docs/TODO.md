@@ -1,3 +1,0 @@
-- ensure that all activePage attributes matches the NavMain enum
-- convert createClass to ES6 functional style
-- package font-awesome
