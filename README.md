@@ -10,6 +10,10 @@ All sample code expects you to pass an `API_KEY` environment variable from the c
 
 ## Development
 
-To build the docs, see the [README in the docs](https://github.com/tercenya/compendium/tree/master/docs) folder
+To build the docs, see the [README in the docs](https://github.com/tercenya/compendium/tree/master/docs) folder.
 
 Pull requests are welcome.
+
+## About the Project
+
+For a discussion of the motivations, trials and tribulations, see [ABOUT.md](https://github.com/tercenya/compendium/tree/master/docs)]
