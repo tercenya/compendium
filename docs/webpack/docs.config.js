@@ -37,8 +37,8 @@ export default _.extend({}, baseConfig, {
   module: {
     noParse: /babel-core\/browser/,
     loaders: [
-      { test: /\.js/, loader: `${reactHot}${jsLoader}`, exclude: /node_modules|Samples\.js/ },
-      { test: /Samples.js/, loader: `${reactHot}transform?brfs!${jsLoader}` },
+      { test: /\.js/, loader: `${reactHot}${jsLoader}`, exclude: /node_modules|SampleCode\.js/ },
+      { test: /SampleCode.js/, loader: `${reactHot}transform?brfs!${jsLoader}` },
       { test: /\.css/, loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}`) },
       { test: /\.scss/, loader: ExtractTextPlugin.extract('style', `css${cssSourceMap}!sass${cssSourceMap}`) },
       { test: /\.less$/, loader: ExtractTextPlugin.extract('style', 'css!less') },

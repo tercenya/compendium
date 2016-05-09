@@ -1,19 +1,18 @@
 import React from 'react';
 import {IndexRoute, Route} from 'react-router';
 
-import HomePage from './HomePage';
-
-import IntroductionPage from './IntroductionPage';
-import PrerequisitesPage from './PrerequisitesPage';
-import GuidesPage from './GuidesPage';
-import FaqPage from './FaqPage';
-import ResourcesPage from './ResourcesPage';
-
-import NotFoundPage from './NotFoundPage';
 import Root from './Root';
 
+import HomePage from './pages/HomePage';
+import IntroductionPage from './pages/IntroductionPage';
+import PrerequisitesPage from './pages/PrerequisitesPage';
+import GuidesPage from './pages/GuidesPage';
+import FaqPage from './pages/FaqPage';
+import ResourcesPage from './pages/ResourcesPage';
+import NotFoundPage from './pages/NotFoundPage';
+
 // guides
-import DataDragonPage from './guides/DataDragon';
+import DataDragonPage from './pages/guides/DataDragon';
 
 
 export default (
