@@ -24,13 +24,13 @@ const GuidesPage = (props) => {
 
               <p>
                 Data Dragon contains <i>static assets</i>: things like images, data, art assets for items, champions, masteries, etc.
-                Riot provides some <A href="https://developer.riotgames.com/docs/static-data">documentation</A> as well as a functional but not entirely intuitive <A href="http://ddragon.leagueoflegends.com/tool/">tool</A> to explore the data.
+                Riot provides some <A href="https://developer.riotgames.com/docs/static-data">documentation</A> as well as a functional, but not entirely intuitive, <A href="http://ddragon.leagueoflegends.com/tool/">tool</A> to explore the data.
                 The tool also has a link to a download called <i>dragontail</i> that contains the latest version of all the assets, if you need to include them locally (say, in your API competition submission).
               </p>
 
               <p>
-                You may need to read Riot's documentation carefully, paying close attention to the yellow-coded, highlighted attributes.
                 Several item require you to call the <A href="https://developer.riotgames.com/api/methods#!/1055">Static Data endpoint</A> first in order to build the proper URL.
+                You may need to read Riot's documentation carefully, paying close attention to the yellow-coded, highlighted attributes to find those values.
               </p>
 
               <h5>A Simple Example</h5>
@@ -58,7 +58,7 @@ const GuidesPage = (props) => {
 
 
               <CodeExample
-                mode='jsx'
+                lang='jsx'
                 codeText={sonaCode}
               />
 
@@ -88,6 +88,5 @@ const GuidesPage = (props) => {
     </div>
   );
 };
-
 
 export default GuidesPage;

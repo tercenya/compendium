@@ -19,7 +19,7 @@ export default class CodeExample extends React.Component {
 
     CodeMirror.runMode(
       this.props.codeText,
-      this.props.mode || 'jsx',
+      this.props.lang || 'jsx',
       ReactDOM.findDOMNode(this).children[0]
     );
   }

@@ -122,5 +122,4 @@ const  = (props) => {
   );
 };
 
-
 export default GuidesPage;

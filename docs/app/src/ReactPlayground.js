@@ -132,7 +132,7 @@ class CodeMirrorEditor extends React.Component {
     if (IS_MOBILE) {
       editor = (
         <CodeExample
-          mode="jsx"
+          lang="jsx"
           codeText={this.props.codeText}
         />
       );

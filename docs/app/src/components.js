@@ -3,6 +3,7 @@
 import SmartAnchor from './components/SmartAnchor.js';
 import Anchor from './components/Anchor.js';
 import CodeExample from './components/CodeExample.js';
+import CondLang from './components/CondLang.js';
 import FontAwesomeIcon from './components/FontAwesomeIcon.js';
 import NavMain from './components/NavMain.js';
 import PageFooter from './components/PageFooter.js';
@@ -16,6 +17,7 @@ export {
   A,
   SmartAnchor,
   CodeExample,
+  CondLang,
   FontAwesomeIcon,
   NavMain,
   PageFooter,

@@ -13,7 +13,7 @@ import NotFoundPage from './pages/NotFoundPage';
 
 // guides
 import DataDragonPage from './pages/guides/DataDragon';
-
+import SummonerDataPage from './pages/guides/SummonerDataPage';
 
 export default (
   <Route path="/" component={Root}>
@@ -22,6 +22,7 @@ export default (
     <Route path="prerequisites" component={PrerequisitesPage} />
     <Route path="guides">
       <IndexRoute component={GuidesPage} />
+      <Route path="summonerdata" component={SummonerDataPage} />
       <Route path="datadragon" component={DataDragonPage} />
     </Route>
     <Route path="faq" component={FaqPage} />

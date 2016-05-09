@@ -22,7 +22,7 @@ const GuidesPage = (props) => {
 
               <p>Introduction to the Riot API</p>
 
-              <p>Example 1 - Fetching summoner data</p>
+              <p><A href="/guides/summonerdata/">Example 1 - Fetching summoner data</A></p>
 
               <p>Example 2 - Fetch match history</p>
 
