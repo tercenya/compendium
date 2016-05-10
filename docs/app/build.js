@@ -11,14 +11,16 @@ import routes from './src/Routes';
 
 import metadata from './generate-metadata';
 
-import {copy} from '../tools/fs-utils';
-import {exec} from '../tools/exec';
+import fsu from '../tools/fs-utils';
+const copy = fsu.copy;
+import x from '../tools/exec';
+const exec = x.exec;
 
 const repoRoot = path.resolve(__dirname, '../');
 const docsBuilt = path.join(repoRoot, 'docs-built');
 
-const license = path.join(repoRoot, 'LICENSE');
-const readmeSrc = path.join(__dirname, 'README.docs.md');
+const license = path.join(repoRoot, '../LICENSE');
+const readmeSrc = path.join(__dirname, '../README.docs.md');
 const readmeDest = path.join(docsBuilt, 'README.md');
 
 /**
@@ -42,10 +44,11 @@ function generateHTML(fileName) {
   });
 }
 
-export default function BuildDocs({dev}) {
+export default function BuildDocs() {
+  var dev = false;
   console.log('Building: '.cyan + 'docs'.green + (dev ? ' [DEV]'.grey : ''));
 
-  const devOption = dev ? '' : '-p';
+  const devOption = '';
 
   return exec(`rimraf ${docsBuilt}`)
     .then(() => fsp.mkdir(docsBuilt))
