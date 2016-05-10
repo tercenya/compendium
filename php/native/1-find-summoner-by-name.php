@@ -19,7 +19,7 @@
 
   # parse the JSON
   # response will take the form o
-  #  {"arinya"=>{"id"=>66209320, "name"=>"Arinya", "profileIconId"=>780, "summonerLevel"=>30, "revisionDate"=>1462505408000}}
+  #  {"arinya": {"id": 66209320, "name": "Arinya", "profileIconId": 780, "summonerLevel": 30, "revisionDate": 1462505408000}}
   $response = json_decode($json);
 
   ### debugging
