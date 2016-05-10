@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { NavMain, PageHeader, PageFooter, A } from '../components';
+import LanguageSelector from '../components/LanguageSelector';
+import LanguageIndicator from '../components/LanguageIndicator';
 
 const Introduction = (props) => {
   return (
@@ -51,6 +53,12 @@ const Introduction = (props) => {
                 This guide provides examples in ruby, java, nodejs, python, and php.
                 Calls against the Riot API also have command-line examples using cURL.
               </p>
+              <LanguageSelector />
+
+              <hr />
+              <LanguageIndicator />
+
+
 
               <h5>Why no javascript?</h5>
               <p>
