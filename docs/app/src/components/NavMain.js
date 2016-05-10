@@ -4,25 +4,28 @@ import { Link } from 'react-router';
 import { Navbar, Nav } from 'react-bootstrap';
 import FontAwesomeIcon from './FontAwesomeIcon';
 
+import Root from '../Root';
+const baseUrl = Root.assetBaseUrl || '';
+
 const NAV_LINKS = {
   'introduction': {
-    link: '/introduction',
+    link: `${baseUrl}/introduction.html`,
     title: 'introduction'
   },
   'prerequisites': {
-    link: '/prerequisites',
+    link: `${baseUrl}/prerequisites.html`,
     title: 'prerequisites'
   },
   'guides': {
-    link: '/guides',
+    link: `${baseUrl}/guides.html`,
     title: 'guides'
   },
   'faq': {
-    link: '/faq',
+    link: `${baseUrl}/faq.html`,
     title: 'faq'
   },
   'resources': {
-    link: '/resources',
+    link: `${baseUrl}/resources.html`,
     title: 'resources'
   }
 };
@@ -51,7 +54,7 @@ const NavMain = (props) => {
     >
       <Navbar.Header>
         <Navbar.Brand>
-          <Link to="/">
+          <Link to={`${baseUrl}/`}>
             <span className="compendium-logo" />
           </Link>
         </Navbar.Brand>

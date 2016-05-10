@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { CodeExample, NavMain, PageHeader, PageFooter, A } from '../../components';
-
-
 import SampleCode from '../../SampleCode';
 
 const GuidesPage = (props) => {
@@ -68,7 +66,7 @@ const GuidesPage = (props) => {
 
 
               <p>
-                Now we have everything we need to build the URL to some beautiful splash art. The important part of this payload is the <code>num</code> field.  We like DJ Sona, so we combine <code>num</code> 6 s the documentation indicates to get this URL: 
+                Now we have everything we need to build the URL to some beautiful splash art. The important part of this payload is the <code>num</code> field.  We like DJ Sona, so we combine <code>num</code> 6 s the documentation indicates to get this URL:
                 <A href="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_6.jpg">http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_6.jpg</A>
               </p>
 

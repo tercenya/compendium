@@ -20,6 +20,7 @@ const repoRoot = path.resolve(__dirname, '../');
 const docsBuilt = path.join(repoRoot, 'docs-built');
 
 const license = path.join(repoRoot, '../LICENSE');
+const riotVerify = path.join(repoRoot, 'riot.txt');
 const readmeSrc = path.join(__dirname, '../README.docs.md');
 const readmeDest = path.join(docsBuilt, 'README.md');
 
@@ -54,7 +55,7 @@ export default function BuildDocs() {
     .then(() => fsp.mkdir(docsBuilt))
     .then(metadata)
     .then(propData => {
-      Root.assetBaseUrl = '';
+      Root.assetBaseUrl = '/compendium';
       Root.propData = propData;
 
       const pagesGenerators = Root.getPages().map(generateHTML);
@@ -62,6 +63,7 @@ export default function BuildDocs() {
       return Promise.all(pagesGenerators.concat([
         exec(`webpack --config webpack.docs.js --bail ${devOption}`),
         copy(license, docsBuilt),
+        copy(riotVerify, docsBuilt),
         copy(readmeSrc, readmeDest)
       ]));
     })

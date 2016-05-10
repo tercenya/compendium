@@ -4,7 +4,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import baseConfig, { options, jsLoader } from './base.config';
 import ip from 'ip';
 
-const webpackDevServerAddress = `http://${ip.address()}:${options.port}`;
+const webpackDevServerAddress = `http://${ip.address()}:${options.port}/compendium`;
 const cssSourceMap = options.debug ? '?sourceMap' : '';
 const reactHot = options.debug ? 'react-hot!' : '';
 
@@ -31,7 +31,7 @@ export default _.extend({}, baseConfig, {
   output: {
     filename: '[name].js',
     path: './docs-built/assets',
-    publicPath: options.debug ? `${webpackDevServerAddress}/assets/` : '/assets/'
+    publicPath: options.debug ? `${webpackDevServerAddress}/assets/` : '/compendium/assets/'
   },
 
   module: {

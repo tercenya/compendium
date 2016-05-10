@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { CodeExample, CondLang, NavMain, PageHeader, PageFooter, A } from '../../components';
+import {
+  LanguageSelector,
+  CodeExample,
+  CondLang,
+  NavMain,
+  PageHeader,
+  PageFooter,
+  A
+} from '../../components';
 import SampleCode from '../../SampleCode';
 
 const CurrentGame = (props) => {
@@ -18,7 +26,7 @@ const CurrentGame = (props) => {
           <div className="col-md-12" role="main">
             <div className="compendium-section">
               <h2>Guide: Look up a match-in-progress</h2>
-
+              <LanguageSelector>
                 <p>
                   Maybe you want to check in a that's currently in progress instead of something that happened long ago?
                   There's an endpoint for that too.
@@ -77,7 +85,7 @@ const CurrentGame = (props) => {
                   I'm writing guides on how to use the Riot API instead of playing League of Legends.
                 </p>
 
-
+              </LanguageSelector>
             </div>
           </div>
         </div>

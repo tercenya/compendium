@@ -11,9 +11,19 @@ const Root = React.createClass({
       return [
         'index.html',
         'introduction.html',
-        'getting-started.html',
-        'components.html',
-        'support.html'
+        'prerequisites.html',
+        'guides.html',
+        'summoner-data.html',
+        'match-data.html',
+        'match-history.html',
+        'data-dragon.html',
+        'current-game.html',
+        'champion-mastery.html',
+        'api.html',
+        'riot.html',
+        'etc.html',
+        'faq.html',
+        'resources.html',
       ];
     }
   },

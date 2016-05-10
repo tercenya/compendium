@@ -10,6 +10,7 @@ import PageFooter from './components/PageFooter.js';
 import PageHeader from './components/PageHeader.js';
 import SubNav from './components/SubNav.js';
 import MFizzIcon from './components/MFizzIcon.js';
+import LanguageSelector from './components/LanguageSelector.js'
 
 // aliases
 const A = SmartAnchor;
@@ -26,5 +27,6 @@ export {
   PageFooter,
   PageHeader,
   SubNav,
-  MFizzIcon
+  MFizzIcon,
+  LanguageSelector
 };

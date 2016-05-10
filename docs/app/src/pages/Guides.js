@@ -2,6 +2,9 @@ import React from 'react';
 
 import { NavMain, PageHeader, PageFooter, A } from '../components';
 
+import Root from '../Root';
+const baseUrl = Root.assetBaseUrl || '';
+
 const Guides = (props) => {
   return (
     <div>
@@ -18,23 +21,23 @@ const Guides = (props) => {
             <div className="compendium-section">
               <h2>Table of Contents</h2>
 
-              <p><A href="/guides/api/">How to use a JSON API</A></p>
+              <p><A href={`${baseUrl}/api.html`}>How to use a JSON API</A></p>
 
-              <p><A href="/guides/riot/">Introduction to the Riot API</A></p>
+              <p><A href={`${baseUrl}/riot.html`}>Introduction to the Riot API</A></p>
 
-              <p><A href="/guides/summoner-data/">Example 1 - Fetching summoner data</A></p>
+              <p><A href={`${baseUrl}/summoner-data.html`}>Example 1 - Fetching summoner data</A></p>
 
-              <p><A href="/guides/match-history/">Example 2 - Fetch match history</A></p>
+              <p><A href={`${baseUrl}/match-history.html`}>Example 2 - Fetch match history</A></p>
 
-              <p><A href="/guides/match-data/">Example 3 - Fetching match data</A></p>
+              <p><A href={`${baseUrl}/match-data.html`}>Example 3 - Fetching match data</A></p>
 
-              <p><A href="/guides/current-game/">Example 4 - Look up a match-in-progress</A></p>
+              <p><A href={`${baseUrl}/current-game.html`}>Example 4 - Look up a match-in-progress</A></p>
 
-              <p><A href="/guides/champion-mastery/">Example 5 - A deep dive: Champion Mastery</A></p>
+              <p><A href={`${baseUrl}/champion-mastery.html`}>Example 5 - A deep dive: Champion Mastery</A></p>
 
-              <p><A href='/guides/data-dragon/'>Using Data Dragon</A></p>
+              <p><A href={`${baseUrl}/data-dragon.html`}>Using Data Dragon</A></p>
 
-              <p><A href="/guides/etc/">A survey of the remainder</A></p>
+              <p><A href={`${baseUrl}/etc.html`}>A survey of the remainder</A></p>
             </div>
           </div>
         </div>

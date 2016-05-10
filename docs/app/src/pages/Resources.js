@@ -20,19 +20,21 @@ const Resources = (props) => {
 
               <table className='table'>
                 <thead>
-                  <th></th>
-                  <th><FontAwesomeIcon icon='windows' />&nbsp;Windows</th>
-                  <th><FontAwesomeIcon icon='apple' />&nbsp;Mac</th>
-                  <th>
-                    <MFizzIcon icon='redhat' />&nbsp;Redhat
-                    /&nbsp;
-                    <MFizzIcon icon='centos' />&nbsp;Centos
-                  </th>
-                  <th>
-                    <MFizzIcon icon='debian' />&nbsp;Debian
-                    /&nbsp;
-                    <MFizzIcon icon='ubuntu' />&nbsp;Ubuntu
-                  </th>
+                  <tr>
+                    <th></th>
+                    <th><FontAwesomeIcon icon='windows' />&nbsp;Windows</th>
+                    <th><FontAwesomeIcon icon='apple' />&nbsp;Mac</th>
+                    <th>
+                      <MFizzIcon icon='redhat' />&nbsp;Redhat
+                      /&nbsp;
+                      <MFizzIcon icon='centos' />&nbsp;Centos
+                    </th>
+                    <th>
+                      <MFizzIcon icon='debian' />&nbsp;Debian
+                      /&nbsp;
+                      <MFizzIcon icon='ubuntu' />&nbsp;Ubuntu
+                    </th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>

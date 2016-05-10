@@ -25,23 +25,22 @@ import Etc from './pages/guides/Etc';
 export default (
   <Route path="/" component={Root}>
     <IndexRoute component={Home} />
-    <Route path="introduction" component={Introduction} />
-    <Route path="prerequisites" component={Prerequisites} />
-    <Route path="guides">
-      <IndexRoute component={Guides} />
-      <Route path="summoner-data" component={SummonerData} />
-      <Route path="match-history" component={MatchHistory} />
-      <Route path="match-data" component={MatchData} />
-      <Route path="data-dragon" component={DataDragon} />
-      <Route path="current-game" component={CurrentGame} />
-      <Route path="champion-mastery" component={ChampionMastery} />
+    <Route path="introduction.html" component={Introduction} />
+    <Route path="prerequisites.html" component={Prerequisites} />
+    <Route path="guides.html" component={Guides} />
+    <Route path="summoner-data.html" component={SummonerData} />
+    <Route path="match-history.html" component={MatchHistory} />
+    <Route path="match-data.html" component={MatchData} />
+    <Route path="data-dragon.html" component={DataDragon} />
+    <Route path="current-game.html" component={CurrentGame} />
+    <Route path="champion-mastery.html" component={ChampionMastery} />
 
-      <Route path="api" component={Overview} />
-      <Route path="riot" component={Riot} />
-      <Route path="etc" component={Etc} />
-    </Route>
-    <Route path="faq" component={Faq} />
-    <Route path="resources" component={Resources} />
+    <Route path="api.html" component={Overview} />
+    <Route path="riot.html" component={Riot} />
+    <Route path="etc.html" component={Etc} />
+    
+    <Route path="faq.html" component={Faq} />
+    <Route path="resources.html" component={Resources} />
 
     <Route path="*" component={NotFound} />
   </Route>

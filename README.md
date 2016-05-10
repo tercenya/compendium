@@ -16,4 +16,4 @@ Pull requests are welcome.
 
 ## About the Project
 
-For a discussion of the motivations, trials and tribulations, see [ABOUT.md](https://github.com/tercenya/compendium/tree/master/docs)
+For a discussion of the motivations, trials and tribulations, see [ABOUT.md](https://github.com/tercenya/compendium/tree/master/docs/ABOUT.md)

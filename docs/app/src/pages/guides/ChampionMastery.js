@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { CodeExample, CondLang, NavMain, PageHeader, PageFooter, A } from '../../components';
+import {
+  LanguageSelector,
+  CodeExample,
+  CondLang,
+  NavMain,
+  PageHeader,
+  PageFooter,
+  A
+} from '../../components';
 
 const ChampionMastery = (props) => {
   return (
