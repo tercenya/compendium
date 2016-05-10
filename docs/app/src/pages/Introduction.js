@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { NavMain, PageHeader, PageFooter, A } from '../components';
-import LanguageSelector from '../components/LanguageSelector';
-import LanguageIndicator from '../components/LanguageIndicator';
+import { NavMain, CondLang, PageHeader, PageFooter, A, LanguageSelector, CodeExample } from '../components';
 
 const Introduction = (props) => {
   return (
@@ -44,19 +42,19 @@ const Introduction = (props) => {
                 However I would encourage you to try, as every program every written was once just the desire of a would-be programmer, who they themselves set forth to learn just the same.  We won't teach you how to program from scratch, although there is a lengthy list of <A href='/resources'>Resources</A> available in the appendix if you need primers on the programming concepts and languages discussed here.
               </p>
 
-              <h4>Structure</h4>
-              <code>@TODO</code>
-
               <h4>Languages</h4>
 
               <p>
-                This guide provides examples in ruby, java, nodejs, python, and php.
-                Calls against the Riot API also have command-line examples using cURL.
+                This guide provides examples in ruby, nodejs, and php.
+                Use the color codes buttons to change the example code language.
               </p>
-              <LanguageSelector />
-
-              <hr />
-              <LanguageIndicator />
+              <LanguageSelector>
+                <CondLang>
+                  <CodeExample lang='ruby' code="puts 'I love ruby!'" />
+                  <CodeExample lang='php' code="<? echo 'I love php!' ?>" />
+                  <CodeExample lang='node' code="console.log('I love nodejs!');" />
+                </CondLang>
+              </LanguageSelector>
 
 
 
@@ -86,7 +84,7 @@ const Introduction = (props) => {
                 Most of Riot's API is not so complicated that it requires a heavy investment in programming to build your own functions.
                 Also, if your project is small, you are unlikely to require more than a handful of endpoints.
                 Doing it yourself will also give you a better understanding of the Riot API and the various JSON payloads, at the expensive of having to figure out the details of the Riot API and its various JSON payloads.
-                Luckily for you, we will walk through the most common endpoints in the Guides sections using both natively and using libraries, and you can choose the method that best suits your needs.
+                Luckily for you, we will walk through the most common endpoints in the Guides sections using both natively, then you can choose the method that best suits your needs.
               </p>
             </div>
           </div>

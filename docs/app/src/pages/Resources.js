@@ -67,11 +67,6 @@ const Resources = (props) => {
                   </tr>
                 </tbody>
               </table>
-
-
-              <p>Installing java on windows / linux / mac</p>
-
-              curl for windows / linux / mac
             </div>
           </div>
         </div>
