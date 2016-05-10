@@ -18,11 +18,6 @@ const Overview = (props) => {
             <div className="compendium-section">
               <h2>Guide: Introduction to the Riot API</h2>
 
-              <CondLang lang='ruby'>
-                <CodeExample lang='ruby' code='RUBY WINS!'/>
-                <CodeExample lang='php' code='php stinks!'/>
-              </CondLang>
-
               <p>Riot's <A href="https://developer.riotgames.com/api/methods">Full API Reference</A> provides additional details about each attribute in the JSON response.</p>
 
               <h4>Keeping your key secure</h4>
@@ -87,11 +82,11 @@ const Overview = (props) => {
                 You shoudln't need to worry about this if you are just setting out, but keep this in mind when you are ready to release your application to the work or you want to start datamining in earnest.
 
                 Riot's pages on Submitting an application:
-                <ul>
-                  <li><A href='https://developer.riotgames.com/docs/app-guidelines'>Application Guidelines</A></li>
-                  <li><A href='https://developer.riotgames.com/docs/dev-guidelines'>Development Guidelines</A></li>
-                </ul>
               </p>
+              <ul>
+                <li><A href='https://developer.riotgames.com/docs/app-guidelines'>Application Guidelines</A></li>
+                <li><A href='https://developer.riotgames.com/docs/dev-guidelines'>Development Guidelines</A></li>
+              </ul>
             </div>
           </div>
         </div>

@@ -1,0 +1,19 @@
+{
+   "matches": [
+      {
+         "timestamp": 1462502623838,
+         "champion": 16,
+         "region": "NA",
+         "queue": "TEAM_BUILDER_DRAFT_RANKED_5x5",
+         "season": "SEASON2016",
+         "matchId": 2179301104,
+         "role": "DUO_SUPPORT",
+         "platformId": "NA1",
+         "lane": "BOTTOM"
+      },
+      (...)
+    ],
+   "totalGames": 120,
+   "startIndex": 0,
+   "endIndex": 120
+}

@@ -1,0 +1,13 @@
+{
+  "gameId": 2179958108,
+  "mapId": 12,
+  "gameMode": "ARAM",
+  "gameType": "MATCHED_GAME",
+  "gameQueueConfigId": 65,
+  "participants": [...],
+  "observers": {...},
+  "platformId": "NA1",
+  "bannedChampions": [...],
+  "gameStartTime": 1462588238241,
+  "gameLength": 160
+}
