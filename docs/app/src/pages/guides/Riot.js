@@ -18,9 +18,8 @@ const Overview = (props) => {
             <div className="compendium-section">
               <h2>Guide: Introduction to the Riot API</h2>
 
-              <p>Riot's <A href="https://developer.riotgames.com/api/methods">Full API Reference</A> provides additional details about each attribute in the JSON response.</p>
-
               <h4>Keeping your key secure</h4>
+              <p> Now that you have an API key, a few notes:</p>
               <ul>
                 <li>don't check your key into source control (e.g. put it on github)</li>
                 <li>don't post your key on the forums (e.g. when asking for help with your code)</li>
@@ -29,6 +28,16 @@ const Overview = (props) => {
               <p>
                 This topic (and many more considerations) is discussed a some length in <A href="https://developer.riotgames.com/discussion/announcements/show/oomYkEK4">the forums.</A>
               </p>
+
+              <h4>The API Reference</h4>
+              <p>
+                Riot's documentation is rather technical, if not terse.
+                The <A href="https://developer.riotgames.com/api/methods">Full API Reference</A> is a good starting point for finding out what is available.
+                It has a built in a mechaism that allows you to exercise the API with your Development key, which saves having to write any code.
+                However, that's not very help when it comes to developing your own project.
+              </p>
+
+              <p>What is helpful though is the copious documentation each field. Riot has dutifly recorded what each attribute means, its type, and is a value reference when trying to find the right piece of data.</p>
 
               <h4>Rate Limits</h4>
 
