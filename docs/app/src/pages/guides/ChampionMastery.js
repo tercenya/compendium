@@ -41,6 +41,10 @@ const ChampionMastery = (props) => {
                   When Riot returns a 404, you usually get a JSON-encoded error message.  With a 204, you get no body at all, so don't try to process it.
                   You'll need to adjust your error handling code accordingly.
                 </p>
+                <p>
+                  Note that just like the Current Game endpoint, we also have to specify a platform ID.
+                  You can find them listed <A href="https://developer.riotgames.com/docs/regional-endpoints">here</A> in the Riot Documentation.
+                </p>
 
                 <table className='table auto'>
                   <tbody>
@@ -75,10 +79,8 @@ const ChampionMastery = (props) => {
                   For this example, we've already pulled one out from the list, our favorite Maven of the Strings, Sona.  Her champion ID is 37.
                 </p>
 
-                <p>Note that just like the Current Game endpoint, we also have to specify a platform ID.</p>
-
                 <p>
-                  The completed URL now looks like this:<br/>
+                  The first completed URL now looks like this:<br/>
                 <code>https://na.api.pvp.net/championmastery/location/NA1/player/66209320/champion/37?api_key=API_KEY</code>
                 </p>
 
