@@ -9,8 +9,8 @@ export default class ConditionalLanguage extends React.Component {
     const lang = this.props.lang || 'ruby';
 
     const children = this.props.children;
-    const target = _.first(children, (c) => { c.props.lang === lang });
+    const target = _.find(children, (c) => { return c.props.lang === lang; });
 
-    return (<div>{target}</div>);
+    return (<div className='condLang'>{target}</div>);
   }
 }
