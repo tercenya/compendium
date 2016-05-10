@@ -114,6 +114,10 @@ export default {
       php: require('fs').readFileSync(__dirname + '/../samplecode/4/cli.php', 'utf8'),
       node: require('fs').readFileSync(__dirname + '/../samplecode/4/cli.js', 'utf8'),
     },
+  },
+  Mastery: {
+    singleChampion: require('fs').readFileSync(__dirname + '/../samplecode/5/1.json', 'utf8'),
+    multiChampion: require('fs').readFileSync(__dirname + '/../samplecode/5/1.json', 'utf8'),
   }
 
 };

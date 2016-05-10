@@ -1,0 +1,25 @@
+[
+   {
+      "highestGrade": "S",
+      "championPoints": 67123,
+      "playerId": 66209320,
+      "championPointsUntilNextLevel": 0,
+      "chestGranted": true,
+      "championLevel": 5,
+      "championId": 16,
+      "championPointsSinceLastLevel": 45523,
+      "lastPlayTime": 1462505408000
+   },
+   {
+      "highestGrade": "S",
+      "championPoints": 37287,
+      "playerId": 66209320,
+      "championPointsUntilNextLevel": 0,
+      "chestGranted": true,
+      "championLevel": 5,
+      "championId": 103,
+      "championPointsSinceLastLevel": 15687,
+      "lastPlayTime": 1462641044000
+   },
+   (...)
+]
