@@ -17,7 +17,8 @@ fetch(uri).then( (response) => {
   // parse as JSON
 
   // response will take the form of:
-  //   {"arinya"=>{"id"=>66209320, "name"=>"Arinya", "profileIconId"=>780, "summonerLevel"=>30, "revisionDate"=>1462505408000}}
+  //   {"arinya": {"id": 66209320, "name": "Arinya", "profileIconId": 780, "summonerLevel": 30, "revisionDate": 1462505408000}}
+
   return response.json()
 }).then( (response) => {
   /// some sample output
